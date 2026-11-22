@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <div class="prose">{{ page.content }}</div>
+  {% if page.timeline %}
+  <ol class="timeline">
+  {% for t in page.timeline %}
+    <li class="timeline-item{% if t.future %} is-future{% endif %}">
+      <span class="timeline-when">{{ t.when }}</span>
+      <span class="timeline-what">{{ t.what }}</span>
+      {% if t.note %}<span class="timeline-note">{{ t.note }}</span>{% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+  {% endif %}
+</article>
+{% endblock %}

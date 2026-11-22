@@ -1,0 +1,23 @@
+# Site settings — read by build.py
+title: Jean Flichy
+description: Electrical engineering student (CentraleSupélec–McGill) heading into energy systems.
+lang: en-GB
+
+# Public address of the site, WITHOUT trailing slash.
+#   GitHub Pages (today):  origin https://coucou330.github.io  +  base_url /jean-flichy-site
+#   Own domain (later):    origin https://www.example.com      +  base_url ""   (empty)
+# base_url can also be overridden at build time: BASE_URL= python build.py
+origin: https://coucou330.github.io
+base_url: /jean-flichy-site
+
+author:
+  name: Jean Flichy
+  email: jeanflichy1@gmail.com        # shown encoded as HTML entities (DECISIONS D3)
+  linkedin: https://www.linkedin.com/in/jean-flichy
+
+nav:
+  - { title: Work, url: /work/ }
+  - { title: About, url: /about/ }
+  - { title: CV, url: /cv/ }
+
+og_image: /img/portrait-800.jpg

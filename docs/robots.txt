@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coucou330.github.io/jean-flichy-site/sitemap.xml

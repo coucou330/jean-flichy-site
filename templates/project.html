@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap page project">
+  <p class="eyebrow"><a href="{{ url('/work/') }}">Work</a></p>
+  <h1 class="page-title">{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+  {% if page.image %}
+  <figure class="figure">
+    <picture>
+      <source type="image/webp" srcset="{{ url(page.image.base ~ '-800.webp') }} 800w, {{ url(page.image.base ~ '-1600.webp') }} 1600w" sizes="(min-width: 960px) 880px, 100vw">
+      <img src="{{ url(page.image.base ~ '-800.jpg') }}" alt="{{ page.image.alt }}" width="800" height="500">
+    </picture>
+    {% if page.image.caption or page.image.credit %}
+    <figcaption>{{ page.image.caption }}{% if page.image.credit %} <span class="credit">{{ page.image.credit }}</span>{% endif %}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+  <dl class="facts">
+    {% for key, label in [("dates","Dates"),("where","Where"),("team","Team"),("role","My role"),("supervisor","Supervisor")] %}
+      {% if page[key] %}<div><dt>{{ label }}</dt><dd>{{ page[key] }}</dd></div>{% endif %}
+    {% endfor %}
+    {% if page.tools %}<div><dt>Tools</dt><dd>{{ page.tools | join(", ") }}</dd></div>{% endif %}
+  </dl>
+  {% if page.tags %}<ul class="tags">{% for tag in page.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  <div class="prose">{{ page.content }}</div>
+  {% set ns = namespace(prev=None, next=None, found=False) %}
+  {% for p in projects %}
+    {% if ns.found and not ns.next %}{% set ns.next = p %}{% endif %}
+    {% if p.url == page.url %}{% set ns.found = True %}{% elif not ns.found %}{% set ns.prev = p %}{% endif %}
+  {% endfor %}
+  <nav class="pager" aria-label="Projects">
+    {% if ns.prev %}<a href="{{ url(ns.prev.url) }}">← {{ ns.prev.title }}</a>{% else %}<span></span>{% endif %}
+    {% if ns.next %}<a href="{{ url(ns.next.url) }}">{{ ns.next.title }} →</a>{% endif %}
+  </nav>
+</article>
+{% endblock %}

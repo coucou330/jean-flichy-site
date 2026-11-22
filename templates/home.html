@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block main %}
+{% set h = page.hero %}
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1 class="hero-name">{{ h.name }}</h1>
+    <p class="hero-tagline">{{ h.tagline }}</p>
+    <p class="hero-meta">{{ h.meta }}</p>
+    <p class="btn-row">
+    {% for b in h.buttons %}
+      {% if b.url.startswith('#') or b.url in live_urls %}
+      <a class="btn btn-{{ b.style }}" href="{{ url(b.url) }}">{{ b.label }}</a>
+      {% endif %}
+    {% endfor %}
+    </p>
+  </div>
+  <picture class="hero-portrait">
+    <source type="image/webp" srcset="{{ url(h.portrait.base ~ '-400.webp') }} 400w, {{ url(h.portrait.base ~ '-800.webp') }} 800w" sizes="(min-width: 960px) 320px, 160px">
+    <img src="{{ url(h.portrait.base ~ '-400.jpg') }}" srcset="{{ url(h.portrait.base ~ '-400.jpg') }} 400w, {{ url(h.portrait.base ~ '-800.jpg') }} 800w" sizes="(min-width: 960px) 320px, 160px" width="400" height="500" alt="{{ h.portrait.alt }}" fetchpriority="high">
+  </picture>
+</section>
+
+{% if page.tiles %}
+<section class="wrap section" aria-labelledby="glance">
+  <h2 class="eyebrow" id="glance">At a glance</h2>
+  <ul class="tiles">
+  {% for t in page.tiles %}
+    <li class="tile"><span class="tile-value">{{ t.value }}</span><span class="tile-label">{{ t.label }}</span></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if page.content | trim %}
+<section class="wrap section prose">{{ page.content }}</section>
+{% endif %}
+{% endblock %}
