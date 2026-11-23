@@ -12,6 +12,8 @@ Rules:
 - HTML comments in Markdown (<!-- ... -->) are internal notes: they are stripped before rendering.
 - Every root-relative link ("/work/") gets the base_url prefix, so the site works both under
   /jean-flichy-site/ and at the root of a custom domain.
+- data/*.yml files are loaded as `data.<name>` in templates (e.g. data/path.yml -> data.path).
+- A paragraph that contains only [[include:NAME]] in Markdown is replaced by templates/partials/NAME.html.
 """
 from __future__ import annotations
 
@@ -30,10 +32,12 @@ ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
+DATA = ROOT / "data"
 OUT = ROOT / "docs"
 
 FRONT_MATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n?(.*)\Z", re.S)
 COMMENT = re.compile(r"<!--.*?-->", re.S)
+INCLUDE = re.compile(r"<p>\[\[include:([a-z0-9_-]+)\]\]</p>")
 
 
 def load_site() -> dict:
@@ -92,14 +96,28 @@ def main() -> None:
 
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
-    env.globals.update(site=site, url=u)
+    data = {f.stem: yaml.safe_load(f.read_text(encoding="utf-8"))
+            for f in sorted(DATA.glob("*.yml"))} if DATA.exists() else {}
+    env.globals.update(site=site, url=u, data=data)
     env.filters["entities"] = encode_entities
 
     def render_md(text: str) -> Markup:
         md.reset()
-        return Markup(prefix_links(md.convert(COMMENT.sub("", text or ""))))
+        html = prefix_links(md.convert(COMMENT.sub("", text or "")))
+        # Partials build their own links with url(): include them after prefixing.
+        html = INCLUDE.sub(lambda m: env.get_template(f"partials/{m.group(1)}.html").render(), html)
+        return Markup(html)
 
     env.filters["md"] = render_md
+
+    def inline_md(text: str) -> Markup:
+        """Render a one-line Markdown string without the surrounding <p>."""
+        html = str(render_md(text)).strip()
+        if html.startswith("<p>") and html.endswith("</p>") and html.count("<p>") == 1:
+            html = html[3:-4]
+        return Markup(html)
+
+    env.filters["inline_md"] = inline_md
 
     # Collect pages
     pages = []
@@ -128,7 +146,7 @@ def main() -> None:
     for page in pages:
         page["content"] = render_md(page["body"])
         tpl = env.get_template(f"{page['layout']}.html")
-        html = tpl.render(page=page, projects=projects, live_urls=live_urls)
+        html = COMMENT.sub("", tpl.render(page=page, projects=projects, live_urls=live_urls))
         target = out_file(page["url"])
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")

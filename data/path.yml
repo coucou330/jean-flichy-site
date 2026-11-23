@@ -1,0 +1,8 @@
+# Frise « Path » (accueil + About). Faits ✅ uniquement — source : CV ETH (20/11), INVENTAIRE A/B.
+- { when: "2023", what: "Baccalauréat, Lycée Saint-Louis-de-Gonzague, Paris", note: "Mathematics and physics · 17.84/20, highest honours" }
+- { when: "2023–25", what: "CentraleSupélec — Bachelor of Global Engineering, Years 1–2", note: "First cohort of the programme · 3rd of 80 after Year 1" }
+- { when: "2024", what: "Research intern, Climate Economics Chair", note: "Used cooking oil and biofuels · Prof. Olivier Massol", url: /work/used-cooking-oil-biofuels/ }
+- { when: "2025", what: "Operations data intern, Flying Whales", note: "Weather operability of a cargo airship", url: /work/airship-weather-operability/ }
+- { when: "2025–27", what: "McGill University — Electrical Engineering, Years 3–4", note: "Cumulative GPA 3.87/4.00 · Team Captain of McGill Robotics" }
+- { when: "2026", what: "Project management intern, Chantiers de l'Atlantique", note: "1,250 MW offshore HVDC converter station for RTE", url: /work/offshore-hvdc-substation/ }
+- { when: "2027", what: "Master's in energy", note: "From September 2027", future: true }

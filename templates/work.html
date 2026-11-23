@@ -1,28 +1,75 @@
 {% extends "base.html" %}
 {% block main %}
-<section class="wrap page">
+<section class="wrap page work-page">
   <h1 class="page-title">{{ page.title }}</h1>
   {% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
-  <ul class="cards">
-  {% for p in page['items'] %}
-    {% set linked = p.url and p.url in live_urls %}
-    <li class="card{% if linked %} is-linked{% endif %}">
-      {% if p.image %}
-      <picture class="card-media">
-        <source type="image/webp" srcset="{{ url(p.image ~ '-800.webp') }}">
-        <img src="{{ url(p.image ~ '-800.jpg') }}" alt="" loading="lazy" width="800" height="500">
-      </picture>
-      {% endif %}
-      <div class="card-body">
-        <p class="card-meta">{{ p.meta }}</p>
-        <h2 class="card-title">{% if linked %}<a href="{{ url(p.url) }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h2>
-        <p class="card-summary">{{ p.summary }}</p>
-        <ul class="tags">{% for tag in p.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>
-        {% if not linked %}<p class="card-status">Case study in preparation</p>{% endif %}
-      </div>
-    </li>
-  {% endfor %}
-  </ul>
+
+  {# Filters: work without JavaScript through :target anchors; JS (below) avoids the jump and updates the count. #}
+  {% for f in page.filters %}<span class="filter-target" id="{{ f | lower }}"></span>{% endfor %}
+  <nav class="filters" aria-label="Filter projects by theme">
+    <span class="filters-label">Filter:</span>
+    <ul>
+      <li><a class="filter" href="#all" data-filter="all">All</a></li>
+      {% for f in page.filters %}<li><a class="filter" href="#{{ f | lower }}" data-filter="{{ f | lower }}">{{ f }}</a></li>{% endfor %}
+    </ul>
+    <p class="filters-status" aria-live="polite"></p>
+  </nav>
+
+  <div class="work-lists" id="work-lists">
+    <section class="work-group" aria-labelledby="main-projects">
+      <h2 class="visually-hidden" id="main-projects">Main projects</h2>
+      <ul class="cards">
+      {% for p in projects %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+      </ul>
+    </section>
+
+    {% if page.more %}
+    <section class="work-group" aria-labelledby="more">
+      <h2 class="section-title" id="more">More projects</h2>
+      <p class="section-intro">Shorter projects, bootcamps and competitions.</p>
+      <ul class="cards cards-compact">
+      {% for p in page.more %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+    <p class="filters-empty">No project in this category yet.</p>
+  </div>
   {{ page.content }}
 </section>
+<script>
+(function () {
+  var root = document.documentElement, lists = document.getElementById("work-lists");
+  if (!lists || !("querySelectorAll" in document)) return;
+  root.classList.add("js-filters");
+  var links = document.querySelectorAll(".filter"), status = document.querySelector(".filters-status");
+  var keys = Array.prototype.map.call(links, function (a) { return a.getAttribute("data-filter"); });
+  function apply(key, announce) {
+    if (keys.indexOf(key) < 0) key = "all";
+    lists.setAttribute("data-active", key);
+    var cards = lists.querySelectorAll(".card"), shown = 0;
+    Array.prototype.forEach.call(cards, function (c) {
+      var ok = key === "all" || (" " + c.getAttribute("data-filters") + " ").indexOf(" " + key + " ") > -1;
+      c.hidden = !ok; if (ok) shown++;
+    });
+    Array.prototype.forEach.call(lists.querySelectorAll(".work-group"), function (g) {
+      g.hidden = !g.querySelector(".card:not([hidden])");
+    });
+    lists.classList.toggle("is-empty", shown === 0);
+    Array.prototype.forEach.call(links, function (a) {
+      if (a.getAttribute("data-filter") === key) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    if (status && announce) status.textContent = key === "all" ? "Showing all projects." : "Showing " + shown + " project" + (shown === 1 ? "" : "s") + ".";
+  }
+  Array.prototype.forEach.call(links, function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var key = a.getAttribute("data-filter");
+      apply(key, true);
+      if (history.replaceState) history.replaceState(null, "", key === "all" ? location.pathname : "#" + key);
+    });
+  });
+  window.addEventListener("hashchange", function () { apply(location.hash.slice(1), true); });
+  apply(location.hash.slice(1), false);
+})();
+</script>
 {% endblock %}

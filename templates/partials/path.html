@@ -1,0 +1,9 @@
+<ol class="timeline">
+{% for t in data.path %}
+  <li class="timeline-item{% if t.future %} is-future{% endif %}">
+    <span class="timeline-when">{{ t.when }}</span>
+    <span class="timeline-what">{% if t.url %}<a href="{{ url(t.url) }}">{{ t.what }}</a>{% else %}{{ t.what }}{% endif %}</span>
+    {% if t.note %}<span class="timeline-note">{{ t.note }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ol>

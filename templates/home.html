@@ -31,7 +31,49 @@
 </section>
 {% endif %}
 
-{% if page.content | trim %}
-<section class="wrap section prose">{{ page.content }}</section>
+{% if projects %}
+<section class="wrap section" aria-labelledby="selected-work">
+  <div class="section-head">
+    <h2 class="section-title" id="selected-work">Selected work</h2>
+    {% if '/work/' in live_urls %}<a class="section-link" href="{{ url('/work/') }}">All projects →</a>{% endif %}
+  </div>
+  <ul class="cards">
+  {% for p in projects[:6] %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if page.why_energy %}
+<section class="wrap section section-split" aria-labelledby="why-energy">
+  <h2 class="section-title" id="why-energy">Why energy</h2>
+  <div class="prose">{{ page.why_energy | md }}
+    {% if '/about/' in live_urls %}<p><a href="{{ url('/about/#why-energy') }}">More about me →</a></p>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if data.path %}
+<section class="wrap section section-split" aria-labelledby="path">
+  <h2 class="section-title" id="path">Path</h2>
+  <div>{% include "partials/path.html" %}</div>
+</section>
+{% endif %}
+
+{% if page.leadership %}
+<section class="wrap section section-split" aria-labelledby="leadership">
+  <h2 class="section-title" id="leadership">Leadership &amp; community</h2>
+  <ul class="rows">
+  {% for l in page.leadership %}
+    <li class="row"><span class="row-title">{% if l.url %}<a href="{{ url(l.url) }}">{{ l.title }}</a>{% else %}{{ l.title }}{% endif %}</span> <span class="row-text">{{ l.text }}</span></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if page.beyond %}
+<section class="wrap section section-split" aria-labelledby="beyond">
+  <h2 class="section-title" id="beyond">Beyond engineering</h2>
+  <div class="prose beyond">{{ page.beyond | md }}</div>
+</section>
 {% endif %}
 {% endblock %}
