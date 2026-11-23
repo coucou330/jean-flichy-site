@@ -244,6 +244,7 @@ html:not(.js-filters) #research:target ~ .work-lists .work-group:not(:has([data-
 .gallery-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
 @media (min-width: 760px) { .gallery-grid { grid-template-columns: 1fr 1fr; align-items: start; } .gallery-grid .is-tall { grid-row: span 2; } }
 .gallery .figure { margin: 0; }
+.gallery-grid.is-wide { grid-template-columns: 1fr; max-width: 60rem; }
 
 /* Project stubs */
 .project > .tags { margin-bottom: var(--space-4); }

@@ -42,10 +42,40 @@
 <article class="wrap page project">
   <p class="eyebrow"><a href="/jean-flichy-site/work/">Work</a></p>
   <h1 class="page-title">Québec grid resilience</h1>
-<p class="lead">How far can an extreme winter push Québec&#39;s transmission grid before load must be shed?</p>  <dl class="facts">
+<p class="lead">How far can an extreme winter push Québec&#39;s transmission grid before load must be shed?</p>  <figure class="figure">
+    <picture>
+      <source type="image/webp" srcset="/jean-flichy-site/img/projects/capstone-peak-voltages-800.webp 800w, /jean-flichy-site/img/projects/capstone-peak-voltages-1600.webp 1600w" sizes="(min-width: 1180px) 1088px, 100vw">
+      <img src="/jean-flichy-site/img/projects/capstone-peak-voltages-800.jpg" srcset="/jean-flichy-site/img/projects/capstone-peak-voltages-800.jpg 800w, /jean-flichy-site/img/projects/capstone-peak-voltages-1600.jpg 1600w" sizes="(min-width: 1180px) 1088px, 100vw" alt="Map of the Québec 735 kV and 315 kV network model, buses coloured by voltage at the January 2022 peak hour" width="800" height="500" fetchpriority="high">
+    </picture>
+    <figcaption>Our corrected model at the peak hour of the test week (3 January 2022, 17:00): every bus voltage, 735 kV and 315 kV lines. <span class="credit">Figure: capstone team</span></figcaption>
+  </figure>
+  <dl class="facts">
 <div><dt>Dates</dt><dd>September 2026 – April 2027 (in progress)</dd></div><div><dt>Where</dt><dd>McGill University, Montréal — ECSE 458 Capstone Design Project</dd></div><div><dt>Team</dt><dd>Four students</dd></div><div><dt>My role</dt><dd>Grid modelling and AC power flow</dd></div><div><dt>Supervisor</dt><dd>Prof. Xiaozhe Wang</dd></div><div><dt>Tools</dt><dd>PyPSA, pandapower, Python</dd></div>  </dl>
-<ul class="tags"><li class="tag">Energy</li><li class="tag">Power systems</li><li class="tag">Modelling</li></ul>  <div class="prose"><p><strong>TL;DR</strong> — With three teammates, I am building an open tool that tells which transmission corridors in Québec, if they fail in an ice or wind storm, cause the most load to be shed — and which measures reduce that risk most. So far I have extended an open PyPSA model of Hydro-Québec's network down to 315 kV and made it converge in AC power flow, cross-checked with pandapower.</p>
+<ul class="tags"><li class="tag">Energy</li><li class="tag">Power systems</li><li class="tag">Modelling</li></ul>  <div class="prose"><p><strong>TL;DR</strong> — With three teammates, I am building an open tool that tells which transmission corridors in Québec, if they fail in an ice or wind storm, cause the most load to be shed — and which measures reduce that risk most. We started from an open PyPSA-Earth model of Hydro-Québec's grid built by a previous McGill student. I led the work that made its 315 kV version converge in AC power flow at all 168 hours of a winter test week, with every bus between 0.95 and 1.05 pu and a voltage-stable solution, cross-checked with pandapower. The main fix: line lengths had been measured in Web Mercator, 41 % to 66 % too long.</p>
 <p class="stub-note">Full write-up coming this week.</p></div>
+  <section class="gallery" aria-labelledby="media">
+    <h2 id="media">Media</h2>
+    <div class="gallery-grid is-wide">
+      <figure class="figure">
+<picture>
+  <source type="image/webp" srcset="/jean-flichy-site/img/projects/capstone-line-lengths-800.webp 800w, /jean-flichy-site/img/projects/capstone-line-lengths-1600.webp 1600w" sizes="(min-width: 1180px) 1088px, 100vw">
+  <img src="/jean-flichy-site/img/projects/capstone-line-lengths-800.jpg" srcset="/jean-flichy-site/img/projects/capstone-line-lengths-800.jpg 800w, /jean-flichy-site/img/projects/capstone-line-lengths-1600.jpg 1600w" sizes="(min-width: 1180px) 1088px, 100vw" alt="Scatter plot showing stored line lengths about 1.4 to 1.7 times too long as latitude increases, and a bar chart comparing 735 kV kilometres in the model with Hydro-Québec&#39;s inventory" width="800" height="294" loading="lazy" decoding="async">
+</picture>        <figcaption>Why the AC model diverged: line lengths had been measured in Web Mercator, which stretches them by 1/cos(latitude) — 41 % to 66 % too long. <span class="credit">Figure: capstone team</span></figcaption>
+      </figure>
+      <figure class="figure">
+<picture>
+  <source type="image/webp" srcset="/jean-flichy-site/img/projects/capstone-test-week-800.webp 800w, /jean-flichy-site/img/projects/capstone-test-week-1600.webp 1600w" sizes="(min-width: 1180px) 1088px, 100vw">
+  <img src="/jean-flichy-site/img/projects/capstone-test-week-800.jpg" srcset="/jean-flichy-site/img/projects/capstone-test-week-800.jpg 800w, /jean-flichy-site/img/projects/capstone-test-week-1600.jpg 1600w" sizes="(min-width: 1180px) 1088px, 100vw" alt="Hourly demand of the January 2022 test week above the band of bus voltages in the model" width="800" height="378" loading="lazy" decoding="async">
+</picture>        <figcaption>The test week, 1–7 January 2022: Hydro-Québec demand (top) and the range of bus voltages in the model at every hour (bottom). <span class="credit">Figure: capstone team</span></figcaption>
+      </figure>
+      <figure class="figure">
+<picture>
+  <source type="image/webp" srcset="/jean-flichy-site/img/projects/capstone-load-margin-800.webp 800w, /jean-flichy-site/img/projects/capstone-load-margin-1600.webp 1600w" sizes="(min-width: 1180px) 1088px, 100vw">
+  <img src="/jean-flichy-site/img/projects/capstone-load-margin-800.jpg" srcset="/jean-flichy-site/img/projects/capstone-load-margin-800.jpg 800w, /jean-flichy-site/img/projects/capstone-load-margin-1600.jpg 1600w" sizes="(min-width: 1180px) 1088px, 100vw" alt="P-V curves of the lowest bus voltage as load and generation are scaled up at the peak hour" width="800" height="347" loading="lazy" decoding="async">
+</picture>        <figcaption>Load margin at the peak hour: voltage, not line ratings, sets the limit. <span class="credit">Figure: capstone team</span></figcaption>
+      </figure>
+    </div>
+  </section>
   <nav class="pager" aria-label="Projects">
 <span></span><a href="/jean-flichy-site/work/offshore-hvdc-substation/">Offshore HVDC converter station →</a>  </nav>
 </article>
