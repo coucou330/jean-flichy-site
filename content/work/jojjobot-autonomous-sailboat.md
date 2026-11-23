@@ -18,6 +18,10 @@ supervisor: Prof. Thiago Alves Lima
 tags: [Robotics, Control, Embedded systems]
 tools: [Python, Raspberry Pi, Simulink]
 description: JojjoBot — leading a team of four on an autonomous sailboat at the L2S laboratory; electronics and embedded Python on a Raspberry Pi.
+image: { base: /img/projects/jojjobot-hull, h: 500, max_w: 1600, alt: "Open 3D-printed hull of the small sailboat on a lab bench, with green brackets holding the electronics and a servo", caption: "The hull with its electronics installed, June 2025.", credit: "" }
+gallery:
+  - { base: /img/projects/jojjobot-bench, h: 600, max_w: 1600, alt: "Raspberry Pi, sensors and wiring on a cutting mat next to a laptop showing Python code", caption: "Integrating the sensors and the embedded Python code on the bench, April 2025.", credit: "" }
+  - { base: /img/projects/jojjobot-jean, h: 1067, max_w: 1600, alt: "Jean sitting on the floor next to the sailboat, its mast and sail standing", caption: "With the boat, mast and sail rigged, June 2025.", credit: "" }
 ---
 <!-- src : CV ETH ; Drive « Projet Jojjo » + rapport final ; reprise par le L2S : INVENTAIRE C. -->
 

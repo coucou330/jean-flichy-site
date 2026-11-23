@@ -7,8 +7,8 @@
   {% if page.image %}
   <figure class="figure">
     <picture>
-      <source type="image/webp" srcset="{{ url(page.image.base ~ '-800.webp') }} 800w, {{ url(page.image.base ~ '-1600.webp') }} 1600w" sizes="(min-width: 960px) 880px, 100vw">
-      <img src="{{ url(page.image.base ~ '-800.jpg') }}" alt="{{ page.image.alt }}" width="800" height="500">
+      <source type="image/webp" srcset="{{ url(page.image.base ~ '-800.webp') }} 800w, {{ url(page.image.base ~ '-1600.webp') }} {{ page.image.max_w or 1600 }}w" sizes="(min-width: 1180px) 1088px, 100vw">
+      <img src="{{ url(page.image.base ~ '-800.jpg') }}" srcset="{{ url(page.image.base ~ '-800.jpg') }} 800w, {{ url(page.image.base ~ '-1600.jpg') }} {{ page.image.max_w or 1600 }}w" sizes="(min-width: 1180px) 1088px, 100vw" alt="{{ page.image.alt }}" width="800" height="500" fetchpriority="high">
     </picture>
     {% if page.image.caption or page.image.credit %}
     <figcaption>{{ page.image.caption }}{% if page.image.credit %} <span class="credit">{{ page.image.credit }}</span>{% endif %}</figcaption>
@@ -23,6 +23,19 @@
   </dl>
   {% if page.tags %}<ul class="tags">{% for tag in page.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>{% endif %}
   <div class="prose">{{ page.content }}</div>
+  {% if page.gallery %}
+  <section class="gallery" aria-labelledby="media">
+    <h2 id="media">Media</h2>
+    <div class="gallery-grid">
+    {% for g in page.gallery %}
+      <figure class="figure{% if g.tall %} is-tall{% endif %}">
+        {% with sizes = "(min-width: 960px) 540px, 100vw" %}{% include "partials/picture.html" %}{% endwith %}
+        <figcaption>{{ g.caption }}{% if g.credit %} <span class="credit">{{ g.credit }}</span>{% endif %}</figcaption>
+      </figure>
+    {% endfor %}
+    </div>
+  </section>
+  {% endif %}
   {% set ns = namespace(prev=None, next=None, found=False) %}
   {% for p in projects %}
     {% if ns.found and not ns.next %}{% set ns.next = p %}{% endif %}

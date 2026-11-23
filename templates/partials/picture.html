@@ -1,0 +1,5 @@
+{# One responsive image. Expects `g` with base, alt, h (height at 800 px), max_w; optional `sizes`, `eager`. #}
+<picture>
+  <source type="image/webp" srcset="{{ url(g.base ~ '-800.webp') }} 800w, {{ url(g.base ~ '-1600.webp') }} {{ g.max_w or 1600 }}w" sizes="{{ sizes or '(min-width: 960px) 680px, 100vw' }}">
+  <img src="{{ url(g.base ~ '-800.jpg') }}" srcset="{{ url(g.base ~ '-800.jpg') }} 800w, {{ url(g.base ~ '-1600.jpg') }} {{ g.max_w or 1600 }}w" sizes="{{ sizes or '(min-width: 960px) 680px, 100vw' }}" alt="{{ g.alt }}" width="800" height="{{ g.h or 500 }}"{% if eager %} fetchpriority="high"{% else %} loading="lazy" decoding="async"{% endif %}>
+</picture>

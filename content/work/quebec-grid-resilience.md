@@ -16,6 +16,7 @@ supervisor: Prof. Xiaozhe Wang
 tags: [Energy, Power systems, Modelling]
 tools: [PyPSA, pandapower, Python]
 description: Capstone project — an open model of Hydro-Québec's grid, extended to 315 kV and made to converge in AC power flow, to study cascading failures in ice and wind storms.
+placeholder: "735 kV · 315 kV"   # bandeau typographique tant qu'il n'y a pas de photo (SHOTLIST)
 ---
 <!-- src : CV ETH ; INVENTAIRE C et H (notes Obsidian « Capstone ECSE 458 »). Noms des coéquipiers non publiés (PLAN §11). -->
 

@@ -13,7 +13,8 @@ Rules:
 - Every root-relative link ("/work/") gets the base_url prefix, so the site works both under
   /jean-flichy-site/ and at the root of a custom domain.
 - data/*.yml files are loaded as `data.<name>` in templates (e.g. data/path.yml -> data.path).
-- A paragraph that contains only [[include:NAME]] in Markdown is replaced by templates/partials/NAME.html.
+- A paragraph that contains only [[include:NAME]] in Markdown is replaced by templates/partials/NAME.html;
+  [[figure:KEY]] or [[figures:KEY1,KEY2]] inserts figures described in data/figures.yml.
 """
 from __future__ import annotations
 
@@ -37,7 +38,7 @@ OUT = ROOT / "docs"
 
 FRONT_MATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n?(.*)\Z", re.S)
 COMMENT = re.compile(r"<!--.*?-->", re.S)
-INCLUDE = re.compile(r"<p>\[\[include:([a-z0-9_-]+)\]\]</p>")
+INCLUDE = re.compile(r"<p>\[\[(include|figures?):([a-z0-9_,-]+)\]\]</p>")
 
 
 def load_site() -> dict:
@@ -98,14 +99,21 @@ def main() -> None:
                       trim_blocks=True, lstrip_blocks=True)
     data = {f.stem: yaml.safe_load(f.read_text(encoding="utf-8"))
             for f in sorted(DATA.glob("*.yml"))} if DATA.exists() else {}
-    env.globals.update(site=site, url=u, data=data)
+    env.globals.update(site=site, url=u, data=data,
+                       all_media=lambda items: all(i.get("image") or i.get("placeholder") for i in items))
     env.filters["entities"] = encode_entities
 
     def render_md(text: str) -> Markup:
         md.reset()
         html = prefix_links(md.convert(COMMENT.sub("", text or "")))
         # Partials build their own links with url(): include them after prefixing.
-        html = INCLUDE.sub(lambda m: env.get_template(f"partials/{m.group(1)}.html").render(), html)
+        def shortcode(m: re.Match) -> str:
+            kind, arg = m.group(1), m.group(2)
+            if kind == "include":
+                return env.get_template(f"partials/{arg}.html").render()
+            figs = [data["figures"][k] for k in arg.split(",")]
+            return env.get_template("partials/figures.html").render(figs=figs)
+        html = INCLUDE.sub(shortcode, html)
         return Markup(html)
 
     env.filters["md"] = render_md

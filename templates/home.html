@@ -38,6 +38,7 @@
     {% if '/work/' in live_urls %}<a class="section-link" href="{{ url('/work/') }}">All projects →</a>{% endif %}
   </div>
   <ul class="cards">
+  {% set show_media = all_media(projects[:6]) %}
   {% for p in projects[:6] %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
   </ul>
 </section>
@@ -73,7 +74,15 @@
 {% if page.beyond %}
 <section class="wrap section section-split" aria-labelledby="beyond">
   <h2 class="section-title" id="beyond">Beyond engineering</h2>
-  <div class="prose beyond">{{ page.beyond | md }}</div>
+  <div>
+    {% if page.beyond_image %}
+    <figure class="figure beyond-figure">
+      {% with g = page.beyond_image, sizes = "(min-width: 960px) 680px, 100vw" %}{% include "partials/picture.html" %}{% endwith %}
+      {% if page.beyond_image.caption %}<figcaption>{{ page.beyond_image.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    <div class="prose beyond">{{ page.beyond | md }}</div>
+  </div>
 </section>
 {% endif %}
 {% endblock %}

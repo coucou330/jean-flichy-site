@@ -20,15 +20,16 @@ I like problems where the physics, the schedule and the people all matter at onc
 
 ## Why energy {#why-energy}
 
-<!-- ⚠️ Récit de la panne en mer (Marseille → Canaries, 60 milles au large de l'Espagne) NON publié tant que Jean n'a pas donné son accord (RETOURS-JEAN). Texte prêt :
-One night in summer 2026, sixty nautical miles off the Spanish coast, the battery alarm woke our crew of four. The engine would not start and there was water in the bilge. My first decision was to cut all the power. I then spent the night between panels, found the leak, isolated the swollen engine battery and rerouted the starter onto the house bank. By morning the engine ran and the lights were back.
-That night stayed with me because it was both a diagnosis and a decision, taken before all the facts were in. -->
+One night in summer 2026, sixty nautical miles off the Spanish coast, the battery alarm woke our crew of four. The engine would not start and there was water in the bilge. My first decision was to cut all the power. I then spent the night between panels with a multimeter, found the leak, isolated the swollen engine battery and rerouted the starter onto the house bank. By morning the engine ran and the lights were back.
+<!-- src : « Claude statement.md » (lettre ETH) ; publication validée par Jean le 22/11 -->
 
-My interest in energy started simply. A power cut at home made me realise how much I take electricity for granted. Reading Jean-Marc Jancovici and the Shift Project's plan for transforming the French economy showed me that the energy transition is a question of orders of magnitude, and I wanted to understand those numbers well enough to argue with them. Living on a boat or in the wild for a few weeks each year is a regular reminder that heat, water and power are finite.
+[[figure:night-batteries]]
+
+That night stayed with me because it was both a diagnosis and a decision, taken before all the facts were in. My interest in energy had started more simply. A power cut at home made me realise how much I take electricity for granted. Reading Jean-Marc Jancovici and the Shift Project's plan for transforming the French economy showed me that the energy transition is a question of orders of magnitude, and I wanted to understand those numbers well enough to argue with them. Living on a boat or in the wild for a few weeks each year is a regular reminder that heat, water and power are finite.
 <!-- src : « Personnal statement.md » (coupure, Jancovici, PTEF, bateau/nature) -->
 <!-- ⚠️ « Réseau électrique que j'avais fait aux scouts » : à raconter en 1 phrase si Jean donne les détails -->
 
-What I enjoy most is the moment when an analysis has to become a decision, often before all the facts are in. I have found that pattern everywhere I have worked. At [Flying Whales](/work/airship-weather-operability/), forecast errors only mattered once they became a go/no-go rule. At [Chantiers de l'Atlantique](/work/offshore-hvdc-substation/), a 1,250 MW platform was shaped as much by schedules and subcontractor choices as by its electrical design. In my [capstone](/work/quebec-grid-resilience/), an extreme Québec winter only becomes useful once it turns into a list of critical corridors.
+I have found the same pattern — diagnose, then decide — everywhere I have worked. At [Flying Whales](/work/airship-weather-operability/), forecast errors only mattered once they became a go/no-go rule. At [Chantiers de l'Atlantique](/work/offshore-hvdc-substation/), a 1,250 MW platform was shaped as much by schedules and subcontractor choices as by its electrical design. In my [capstone](/work/quebec-grid-resilience/), an extreme Québec winter only becomes useful once it turns into a list of critical corridors.
 <!-- src : lettre ETH ; 1,250 MW : rapport EIP -->
 
 I want to become an engineer who can take — and defend — the decisions that keep energy systems running when the weather turns.
@@ -87,35 +88,39 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
 
 <!-- Faits ✅ uniquement, du plus récent au plus ancien. -->
 <!-- ⚠️ Kangourou des mathématiques (top 100) : année, niveau, classement → non publié. -->
-<!-- ⚠️ Années exactes des hackathons non confirmées : on reprend la plage du CV ETH (2023–26). -->
-<!-- ⚠️ Olympiades de maths de Paris : année (2022 ?) non confirmée → affichée sans année. -->
+<!-- Années : IEEE Xtreme nov. 2025, FORGE Hack mars 2026, McGill Engineering Competition 3e en nov. 2025 (Jean, 22/11). -->
+<!-- Olympiades de maths de Paris : en terminale (Jean, 22/11) → 2022–23. -->
 <!-- ⚠️ Nom exact du prix FloodViz : on écrit « winning team » (CV ETH). -->
 <ul class="awards">
 <li><span class="award-year">2026</span> <span class="award-what"><strong>RoboSub 2026</strong> with McGill Robotics: 6th of 68 teams, 2nd in North America (as a team member).</span></li>
 <li><span class="award-year">2026</span> <span class="award-what"><strong>McGill Eloquence Competition</strong>: semi-finalist.</span></li>
 <li><span class="award-year">2026</span> <span class="award-what"><strong>Remote First Aid and CPR/AED level C</strong> (Canadian Red Cross).</span></li>
-<li><span class="award-year">2023–26</span> <span class="award-what"><strong>Competitions</strong>: McGill Engineering Competition, 3rd place · IEEE Xtreme, Top 20 in Canada · FORGE Hack, 2nd place and Best Design Award.</span></li>
+<li><span class="award-year">2026</span> <span class="award-what"><strong>FORGE Hack</strong>: 2nd place and Best Design Award, with a robot that shoots basketballs.</span></li>
+<li><span class="award-year">2025</span> <span class="award-what"><strong>McGill Engineering Competition</strong>: 3rd place.</span></li>
+<li><span class="award-year">2025</span> <span class="award-what"><strong>IEEE Xtreme</strong> (24-hour programming competition): Top 20 in Canada.</span></li>
 <li><span class="award-year">2023–25</span> <span class="award-what"><strong>Winning team in three CentraleSupélec challenges</strong>: Robotics Bootcamp, Coding Weeks (FloodViz) and the Motor Challenge.</span></li>
 <li><span class="award-year">2023–25</span> <span class="award-what"><strong>Five CentraleSupélec merit scholarships</strong>: first-year completion (3rd prize), mathematics (2nd), physics (3rd), human and social sciences (2nd), and student representative engagement.</span></li>
 <li><span class="award-year">2023</span> <span class="award-what"><strong>Concours Général</strong> (French national competition): selected in physics and in English.</span></li>
 <li><span class="award-year">2023</span> <span class="award-what"><strong>Baccalauréat</strong> with highest honours (17.84/20).</span></li>
-<li><span class="award-year">School</span> <span class="award-what"><strong>Paris Mathematics Olympiad</strong>: 3rd place as a team.</span></li>
+<li><span class="award-year">2022–23</span> <span class="award-what"><strong>Paris Mathematics Olympiad</strong>: 3rd place as a team (final year of school).</span></li>
 </ul>
 
 ## Beyond engineering {#beyond}
 
-<!-- Photo voile : manquante (SHOTLIST #2). D5 : DJ non publié par défaut. -->
+<!-- D5 : DJ non publié par défaut. Photos : 03 Assets/a-trier (22/11). -->
 - **Sailing.** Skipper in student regattas (Spi Dauphine, Régate Centrale Méditerranée), 2nd at the Voiles Étudiantes du Havre; offshore passage from Marseille to the Canary Islands in 2026; an Atlantic crossing planned for June 2027. Windsurfing level 4A.
   <!-- src : INVENTAIRE F ; CV ETH -->
 - **Rugby.** School and university competitions, including 4th place in the Île-de-France school championship.
   <!-- src : INVENTAIRE F (sigles TOSS / TRIP retirés) -->
-- **Running.** A marathon in 2026.
-  <!-- src : CV ETH. ⚠️ lequel ? -->
+- **Running.** The Beneva Montréal Marathon in 2026.
+  <!-- src : CV ETH ; Jean (22/11) : Marathon Beneva de Montréal -->
 - **Scouting.** Scouts Unitaires de France, 2012–24: patrol leader of seven teenagers for a year and organiser of a three-week summer camp; volunteer with Hiver Solidaire and street breakfasts.
   <!-- src : CV ETH ; INVENTAIRE D (candidature EE Stream) -->
 - **Public speaking.** Semi-finalist of the McGill Eloquence Competition.
 - **Reading at the moment:** Jean-Marc Jancovici and the Shift Project.
   <!-- src : INVENTAIRE F -->
+
+[[figures:sailing-dolphin,regatta-le-havre,rugby,marathon]]
 
 ## Languages {#languages}
 

@@ -15,6 +15,11 @@ role: Team Captain (co-director); previously hydrophone electronics
 tags: [Leadership, Robotics, Electronics]
 tools: [MATLAB, LTspice]
 description: Team Captain of McGill Robotics — 220 students, three robots, a CAD 100k budget back in the black after a CAD 30k deficit.
+image: { base: /img/projects/robotics-auv-electronics, h: 500, max_w: 1600, alt: "Open red waterproof case packed with circuit boards and colour-coded cables", caption: "Inside the underwater vehicle's electronics enclosure.", credit: "" }
+gallery:
+  - { base: /img/projects/robotics-team, h: 1067, max_w: 1600, alt: "McGill Robotics members gathered in the team's workshop under a RoboSub 2025 banner", caption: "McGill Robotics in its workshop.", credit: "Photo: McGill Robotics", tall: true }
+  - { base: /img/projects/robotics-captain-talk, h: 1067, max_w: 1600, alt: "Jean presenting in front of a screen to a room of students, seen from behind the audience", caption: "Presenting to members as Team Captain, September 2026.", credit: "", tall: true }
+  - { base: /img/projects/robotics-scope, h: 600, max_w: 1600, alt: "Oscilloscope screen showing two green signal traces, one with a sharp burst", caption: "Bench test on the oscilloscope, April 2026.", credit: "" }
 ---
 <!-- src : CV ETH ; robotics/Sponsor Pres.pdf ; shield : Jean 09/11 (validé en simulation, tests en cours). -->
 

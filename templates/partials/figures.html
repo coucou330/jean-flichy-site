@@ -1,0 +1,8 @@
+<div class="figures figures-{{ figs | length }}">
+{% for g in figs %}
+  <figure class="figure">
+    {% with sizes = "(min-width: 960px) 680px, 100vw" if figs | length == 1 else "(min-width: 640px) 340px, 50vw" %}{% include "partials/picture.html" %}{% endwith %}
+    {% if g.caption or g.credit %}<figcaption>{{ g.caption }}{% if g.credit %} <span class="credit">{{ g.credit }}</span>{% endif %}</figcaption>{% endif %}
+  </figure>
+{% endfor %}
+</div>

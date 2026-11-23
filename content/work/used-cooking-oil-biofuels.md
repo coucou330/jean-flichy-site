@@ -15,6 +15,7 @@ role: Research intern
 supervisor: Prof. Olivier Massol
 tags: [Energy economics, Policy, Biofuels]
 description: Research internship at the Climate Economics Chair — a market overview of used cooking oil for biofuels, EU directives and fraud risks.
+placeholder: "UCO → biodiesel"   # bandeau typographique tant qu'il n'y a pas de photo (SHOTLIST)
 ---
 <!-- src : rapport CEC (Drive « Massol ») ; INVENTAIRE B et H. -->
 

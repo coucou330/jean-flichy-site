@@ -18,6 +18,7 @@
   <div class="work-lists" id="work-lists">
     <section class="work-group" aria-labelledby="main-projects">
       <h2 class="visually-hidden" id="main-projects">Main projects</h2>
+      {% set show_media = all_media(projects) %}
       <ul class="cards">
       {% for p in projects %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
       </ul>
@@ -28,7 +29,8 @@
       <h2 class="section-title" id="more">More projects</h2>
       <p class="section-intro">Shorter projects, bootcamps and competitions.</p>
       <ul class="cards cards-compact">
-      {% for p in page.more %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+      {% set show_media = False %}
+      {% for p in page.more %}{% with heading = "h3", compact = True %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
       </ul>
     </section>
     {% endif %}

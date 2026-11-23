@@ -14,6 +14,7 @@ role: Operations data intern
 tags: [Data, Weather, Transport]
 tools: [Python]
 description: Flying Whales internship — six months of on-site LiDAR wind data against AROME forecasts, turned into operability statistics and a go/no-go rule.
+placeholder: "LiDAR 50–300 m"   # bandeau typographique tant qu'il n'y a pas de photo (SHOTLIST)
 ---
 <!-- src : rapport EDI (LCA60T 200 m ; LiDAR 50–300 m ; AROME ; 6 mois) ; année 2025 (coquille 2024 dans le rapport). -->
 

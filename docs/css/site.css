@@ -220,6 +220,31 @@ html:not(.js-filters) #research:target ~ .filters a[href="#research"] { backgrou
 html:not(.js-filters) #research:target ~ .work-lists .card:not([data-filters~="research"]) { display: none; }
 html:not(.js-filters) #research:target ~ .work-lists .work-group:not(:has([data-filters~="research"])) { display: none; }
 
+/* Card placeholder (projects without a photo yet) and compact thumbnails */
+.card-placeholder { aspect-ratio: 16 / 10; display: flex; align-items: flex-end; padding: var(--space-4); background-color: var(--ink);
+  background-image: linear-gradient(rgba(247,245,240,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(247,245,240,.07) 1px, transparent 1px);
+  background-size: 24px 24px; }
+.card-placeholder span { font-family: var(--font-serif); font-weight: 600; font-size: var(--step-2); color: var(--paper); line-height: 1.1; border-left: 4px solid var(--accent); padding-left: var(--space-3); }
+.card.has-thumb .card-thumb img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+.cards-compact { align-items: start; }
+
+/* Figures inside prose */
+.figures { display: grid; gap: var(--space-3); margin: var(--space-4) 0; }
+.figures-2, .figures-4 { grid-template-columns: 1fr 1fr; }
+.figures-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 480px) { .figures-3 { grid-template-columns: 1fr; } }
+.figures .figure { margin: 0; }
+.figures img { aspect-ratio: 4 / 3; object-fit: cover; }
+.figures-1 img { aspect-ratio: auto; }
+.beyond-figure { margin-top: 0; }
+.beyond-figure img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* Project gallery */
+.project > .figure img { aspect-ratio: 16 / 10; object-fit: cover; }
+.gallery-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .gallery-grid { grid-template-columns: 1fr 1fr; align-items: start; } .gallery-grid .is-tall { grid-row: span 2; } }
+.gallery .figure { margin: 0; }
+
 /* Project stubs */
 .project > .tags { margin-bottom: var(--space-4); }
 @media (max-width: 480px) { .timeline-item { grid-template-columns: 4.25rem 1fr; column-gap: var(--space-3); } .timeline-item::before { left: calc(4.25rem + var(--space-3) / 2 - 1px); } .timeline-item::after { left: calc(4.25rem + var(--space-3) / 2 - 6px); } }
