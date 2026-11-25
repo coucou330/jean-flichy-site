@@ -2,7 +2,7 @@
 title: Work
 description: Projects in energy systems, robotics and research — Jean Flichy.
 layout: work
-intro: Six projects, from power systems modelling to an offshore converter station, followed by shorter projects and competitions. Detailed case studies are being added this week.
+intro: Six projects, from power systems modelling to an offshore converter station, each with a full case study, followed by shorter projects and competitions.
 # Les 6 cartes principales viennent des pages content/work/*.md (champ `order`).
 # Filtres (PLAN §5) : Energy · Robotics · Leadership · Research — attribués par le champ `filters`.
 filters: [Energy, Robotics, Leadership, Research]
@@ -14,6 +14,8 @@ more:
     summary: A start-up simulation on decarbonising shipping with rigid wing sails. We compared rigid, soft, rotor and kite sails, scraped data on more than 4,000 ships built since 2015 to pick a target segment, designed a foldable 1,000 m² sail on a rotating base and built a first business case on EU carbon pricing.
     tags: [Shipping, Business plan]
     filters: [Energy]
+    image: { base: /img/projects/cblade-sail-model, h: 450, max_w: 852, alt: "3D model of a rigid wing sail: a red frame of ribs and spars on a round rotating base, shown folded and unfolded" }
+    # image : poster C-Blade (SHOTLIST #19), maquette 3D seule — jamais le poster entier
     # src : Drive « C-Blade report V2 » ; brouillons/more-projects.md ; Jean (23/11) : projet d'entrepreneuriat de 1re année, 3 mois
   - title: Keeping a desert solar park clean
     meta: McGill · WCOM 206 business proposal
@@ -21,6 +23,8 @@ more:
     summary: For a fictional energy consultancy, we proposed an electrostatic dust-removal system for the Quaid-e-Azam Solar Park in Pakistan's Cholistan desert (100 MW, about 400,000 panels). I wrote the literature review on how dust cuts panel output and worked out the power supply — one 3 kV supply per combiner box, about 0.75 W per panel.
     tags: [Solar, Technical writing]
     filters: [Energy]
+    image: { base: /img/projects/solar-dust-wiring, h: 450, max_w: 1600, alt: "Hand-drawn whiteboard diagram: solar panels with motors wired to a combiner box, an IoT controller and a transformer feeding the electrostatic cleaning system at 3,000 V and 0.25 mA" }
+    # image : tableau blanc de Jean (SHOTLIST #16)
     # src : Jean (23/11) ; INVENTAIRE I (392 158 modules ; 3 kV ; 0,75 W). Gains chiffrés non publiés (Jean, 23/11).
   - title: SmartBike — a navigation lamp for cyclists
     meta: McGill · INTG 215 · team of six · CTO and CFO
@@ -28,6 +32,8 @@ more:
     summary: A start-up case for a bike lamp that also projects navigation arrows onto the road with a laser, so cyclists can keep their phone in their pocket. As CTO and CFO, I wrote the technical plan — a 55-week roadmap from prototype to a pilot batch — and the budget, a four-year financial plan (CAD 20 unit cost, CAD 30 wholesale price).
     tags: [Entrepreneurship, Product]
     filters: [Leadership]
+    image: { base: /img/projects/smartbike-roadmap, h: 450, max_w: 1274, alt: "Project roadmap table: six phases from specifications and market interviews in January to pilot production and launch in December" }
+    # image : diapo 23 de la présentation INTG215 (SHOTLIST #17)
     # src : présentation INTG215 (sources/2026-11-23) ; INVENTAIRE I ; rôle CTO et CFO (Jean, 23/11)
   - title: VizAdrift — could a boat drift home to France?
     meta: CentraleSupélec Modelling Week · two weeks
@@ -35,6 +41,8 @@ more:
     summary: We studied North Atlantic weather regimes in historical data, coded a low-order atmospheric model (Charney–DeVore) in Python, measured its predictability with Lyapunov exponents and turned it into winds pushing a kite-towed boat from Montréal. Under a stable blocking regime it never reaches France; with westerly winds it can, in 35 to 100 days.
     tags: [Modelling, Weather]
     filters: [Research]
+    image: { base: /img/projects/vizadrift-trajectories, h: 450, max_w: 855, alt: "Map of the North Atlantic with dozens of simulated 100-day drift trajectories curving towards Iceland and Scandinavia under a stable blocking regime" }
+    # image : diapo 29 de la présentation VizAdrift (SHOTLIST #20)
     # src : présentation finale VizAdrift (sources/2026-11-23). ⚠️ « validé sur 30 ans de données » retiré (cité comme amélioration future).
   - title: FloodViz — urban flooding
     meta: Coding Weeks, with Onepoint Bordeaux · two weeks
@@ -50,6 +58,8 @@ more:
     summary: Electronic beam steering for a coastal radar. We modelled a phased array, computed the phase shifts needed to sweep ±45° in azimuth, and cut the array to 24 emitters over 4 m — a full sweep in 0.036 s. A Hann window on the emitters limits false echoes from strong reflectors off to the side. Visiting Thales's radar site in Limours made me choose electrical engineering.
     tags: [Electromagnetism, Simulation]
     filters: [Research]
+    image: { base: /img/projects/radar-beam-pattern, h: 450, max_w: 1600, alt: "Polar plot of a phased-array radiation pattern with the main beam steered to minus 28.7 degrees" }
+    # image : diapo 17 de la présentation radar (SHOTLIST #15), recadrée sur le diagramme
     # src : sources/2026-11-23/RADAR_beam_deflection_Thales_Modelling_Week.pdf ; année : 2e année (2024-25), Jean (23/11) → « 2025 »
   - title: Robotics Bootcamp — winning team
     meta: CentraleSupélec · one week

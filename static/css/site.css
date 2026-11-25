@@ -281,3 +281,13 @@ html:not(.js-filters) #research:target ~ .work-lists .work-group:not(:has([data-
   .diagram-wide { display: none; }
   .diagram-tall { display: block; }
 }
+
+/* Data tables inside prose (étape 5, 25/11 : page « Used cooking oil ») */
+.prose h3 { font-size: var(--step-1); margin-top: var(--space-5); }
+.table-wrap { overflow-x: auto; margin-block: var(--space-3); -webkit-overflow-scrolling: touch; }
+.prose table { border-collapse: collapse; width: 100%; font-size: var(--step--1); line-height: 1.4; background: var(--surface); }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); }
+.prose thead th { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--ink); }
+.prose td:nth-child(2) { font-weight: 600; color: var(--ink); }
+@media (max-width: 560px) { .prose th, .prose td { padding: var(--space-2); } .prose th:nth-child(1), .prose td:nth-child(1) { min-width: 9rem; } }
+.table-note { color: var(--grey); font-size: var(--step--1); margin-top: 0; }

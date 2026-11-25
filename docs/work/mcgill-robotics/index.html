@@ -51,8 +51,36 @@
   </figure>
   <dl class="facts">
 <div><dt>Dates</dt><dd>Member since September 2025 · Team Captain since 2026</dd></div><div><dt>Where</dt><dd>McGill University, Montréal</dd></div><div><dt>Team</dt><dd>220 students, three robot projects</dd></div><div><dt>My role</dt><dd>Team Captain (co-director); previously hydrophone electronics</dd></div><div><dt>Tools</dt><dd>MATLAB, LTspice</dd></div>  </dl>
-<ul class="tags"><li class="tag">Leadership</li><li class="tag">Robotics</li><li class="tag">Electronics</li></ul>  <div class="prose"><p><strong>TL;DR</strong> — McGill Robotics is a student design team of 220 members building three competition robots. As Team Captain, I co-lead it with a co-director: we manage a CAD 100k budget, back in the black for the first time after a CAD 30k deficit. Before taking the role, I designed the filter shield for the underwater vehicle's hydrophones, validated in simulation (MATLAB, LTspice); tests are under way.</p>
-<p class="stub-note">Full write-up coming this week.</p></div>
+<ul class="tags"><li class="tag">Leadership</li><li class="tag">Robotics</li><li class="tag">Electronics</li></ul>  <div class="prose"><p><strong>TL;DR</strong> — McGill Robotics is a student design team of 220 members building three competition robots. As Team Captain, I co-lead it with a co-director: we manage a CAD 100k budget, balanced this year for the first time after a CAD 30k deficit. Before taking the role, I designed the filter shield for the underwater vehicle's hydrophones, validated in simulation (MATLAB, LTspice); bench tests are under way.</p>
+<h2>Context</h2>
+<p>The club runs three projects, each aimed at an international competition: an autonomous underwater vehicle (RoboSub), a Mars rover (Canadian International Rover Challenge) and a hybrid VTOL drone (Student Unmanned Aerial Systems competition). It also organises RoboHacks, a 24-hour robotics hackathon for CEGEP and undergraduate students, and outreach in schools.</p>
+<p>The teams had done well before my term: first place for the design presentation at RoboSub 2025, first place in the science task at the Canadian International Rover Challenge 2025 (11th overall), and the Dawn Jaeger Tenacity Award at SUAS 2024. Those results belong to the members of those years.</p>
+<h2>What I do as Team Captain</h2>
+<ul>
+<li><strong>Co-lead the team</strong> with a co-director: coordinate the three project teams and the business team, and represent the club to the faculty and to sponsors.</li>
+<li><strong>Manage a CAD 100k budget</strong> from grants and sponsors. After a CAD 30k deficit, this is the club's first balanced year.</li>
+<li><strong>Outreach:</strong> robotics workshops for 13-year-olds and talks in Montréal CEGEPs.</li>
+</ul>
+<h2>What I built as a member: the hydrophone filter shield</h2>
+<p>The underwater vehicle locates an acoustic pinger, which emits between 25 and 40 kHz, by comparing the signals of several hydrophones. The hydrophone signals have to be amplified, and everything outside that band filtered out, before they can be processed. I designed that filtering stage.</p>
+<ul>
+<li><strong>Circuit.</strong> A preamplifier, four band-pass filter stages and an output amplifier, built around op-amps.</li>
+<li><strong>Simulation.</strong> In my LTspice model, the chain gives about 60 dB of gain across the 25–40 kHz band, while a 1 kHz signal comes out more than 100 dB lower. I also checked the design in MATLAB.</li>
+<li><strong>Status.</strong> The design is validated in simulation; bench tests are under way.</li>
+</ul>
+<div class="figures figures-1">
+  <figure class="figure">
+<picture>
+  <source type="image/webp" srcset="/jean-flichy-site/img/projects/robotics-shield-response-800.webp 800w, /jean-flichy-site/img/projects/robotics-shield-response-1600.webp 1600w" sizes="(min-width: 960px) 680px, 100vw">
+  <img src="/jean-flichy-site/img/projects/robotics-shield-response-800.jpg" srcset="/jean-flichy-site/img/projects/robotics-shield-response-800.jpg 800w, /jean-flichy-site/img/projects/robotics-shield-response-1600.jpg 1600w" sizes="(min-width: 960px) 680px, 100vw" alt="Gain of the filter chain against frequency on a log scale: it rises from about minus 59 dB at 1 kHz to a flat plateau near 60 dB across the shaded 25 to 40 kHz band, then falls to about 22 dB at 100 kHz" width="800" height="420" loading="lazy" decoding="async">
+</picture><figcaption>Simulated gain of the shield&#39;s filter chain, from my LTspice model (April 2026): nearly flat across the pinger band, with strong rejection of lower frequencies. <span class="credit">Figure: Jean Flichy, LTspice simulation data</span></figcaption>  </figure>
+</div>
+<h2>Results</h2>
+<ul>
+<li><strong>RoboSub 2026:</strong> 6th of 68 teams and 2nd in North America — a team result, from my year as a member.</li>
+<li><strong>Finances:</strong> the club's first balanced year after a CAD 30k deficit.</li>
+<li><strong>Shield:</strong> a filter design validated in simulation, now in bench testing.</li>
+</ul></div>
   <section class="gallery" aria-labelledby="media">
     <h2 id="media">Media</h2>
     <div class="gallery-grid">
