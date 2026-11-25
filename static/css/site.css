@@ -269,3 +269,15 @@ html:not(.js-filters) #research:target ~ .work-lists .work-group:not(:has([data-
   .site-header, .site-footer, .btn-row, .skip-link { display: none; }
   body { background: #fff; }
 }
+
+/* Inline SVG diagrams (project pages): wide version on desktop, tall version on phones */
+.figure-diagram { margin: var(--space-5) 0; }
+.diagram { display: block; width: 100%; height: auto; }
+.diagram text { font-family: var(--font-sans); }
+.diagram-wide { max-width: 60rem; }
+.diagram-tall { display: none; max-width: 24rem; margin: 0 auto; }
+@media (min-width: 901px) { .prose .figure-diagram { width: min(60rem, calc(100vw - 64px)); max-width: none; } }
+@media (max-width: 900px) {
+  .diagram-wide { display: none; }
+  .diagram-tall { display: block; }
+}

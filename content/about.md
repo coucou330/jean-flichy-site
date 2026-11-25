@@ -113,6 +113,8 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
 - **Rugby.** School and university competitions, including 4th place in the Île-de-France school championship.
   <!-- src : INVENTAIRE F (sigles TOSS / TRIP retirés) -->
 - **Running.** The Beneva Montréal Marathon in 2026.
+- **Travelling without flying.** An Interrail trip every year, from Greece to the North Cape in Norway, and to the Canary Islands and back without a plane.
+  <!-- src : Jean (23/11) -->
   <!-- src : CV ETH ; Jean (22/11) : Marathon Beneva de Montréal -->
 - **Scouting.** Scouts Unitaires de France, 2012–24: patrol leader of seven teenagers for a year and organiser of a three-week summer camp; volunteer with Hiver Solidaire and street breakfasts.
   <!-- src : CV ETH ; INVENTAIRE D (candidature EE Stream) -->
