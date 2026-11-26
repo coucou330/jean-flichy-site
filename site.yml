@@ -20,4 +20,10 @@ nav:
   - { title: About, url: /about/ }
   - { title: CV, url: /cv/ }
 
-og_image: /img/portrait-800.jpg
+og_image: /img/og-image.jpg          # 1200x630: portrait + name + one-line summary
+og_image_alt: "Portrait of Jean Flichy next to his name and the line: Electrical engineering student (CentraleSupélec–McGill) heading into energy systems."
+
+# schema.org Person (JSON-LD on the home page)
+person:
+  job_title: Electrical engineering student
+  alumni_of: [CentraleSupélec, McGill University]

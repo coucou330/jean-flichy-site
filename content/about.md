@@ -58,7 +58,7 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
 
 ## Leadership & representation {#leadership}
 
-- **McGill Robotics — Team Captain (since 2026), member since 2025.** I co-lead a 220-student team building three robots: a drone, a Mars rover and an autonomous underwater vehicle. We manage a CAD 100k budget, balanced for the first time after a CAD 30k deficit. [More →](/work/mcgill-robotics/)
+- **McGill Robotics — Team Captain (since 2026), member since 2025.** I co-lead a 220-student team building three robots: a drone, a Mars rover and an autonomous underwater vehicle. We manage a CAD 100k budget, balanced for the first time after a CAD 30k deficit, and have raised more than CAD 25,000 so far this year. I also lead the hydrophone sub-team. [More →](/work/mcgill-robotics/)
   <!-- src : CV ETH -->
 - **Bureau des Bachelors, CentraleSupélec — co-founder and President (Nov. 2023 – Feb. 2025).** As the first cohort, we had no student association of our own. With a team of 17 we wrote the statutes, managed a EUR 40k budget for 240 students and organised the first edition of every Bachelor event: welcome week, gala and ski trip. I also wrote internal rules and a handover guide; the association still runs today with new committees.
   <!-- src : lettre bourse CS Alumni ; CV ETH -->

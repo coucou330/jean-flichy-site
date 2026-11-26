@@ -19,6 +19,7 @@ Rules:
 from __future__ import annotations
 
 import datetime as dt
+import json
 import os
 import re
 import shutil
@@ -79,6 +80,16 @@ def encode_entities(s: str) -> Markup:
     return Markup("".join(f"&#{ord(c)};" for c in s))
 
 
+def minify_css(css: str) -> str:
+    """Small, safe CSS minifier: drop comments and collapse whitespace (no reordering)."""
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,>])\s*", r"\1", css)
+    css = re.sub(r":\s+", ":", css)  # "a: b" -> "a:b" (selectors like "a :hover" are not used)
+    css = css.replace(";}", "}")
+    return css.strip() + "\n"
+
+
 def main() -> None:
     site = load_site()
     base = site["base_url"]
@@ -102,6 +113,22 @@ def main() -> None:
     env.globals.update(site=site, url=u, data=data,
                        all_media=lambda items: all(i.get("image") or i.get("placeholder") for i in items))
     env.filters["entities"] = encode_entities
+
+    # schema.org Person, printed as JSON-LD on the home page
+    person = site.get("person") or {}
+    abs_root = site["origin"].rstrip("/") + base + "/"
+    person_ld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": site["author"]["name"],
+        "url": abs_root,
+        "image": site["origin"].rstrip("/") + u("/img/portrait-800.jpg"),
+        "jobTitle": person.get("job_title"),
+        "alumniOf": [{"@type": "CollegeOrUniversity", "name": n} for n in person.get("alumni_of", [])],
+        "sameAs": [site["author"]["linkedin"]],
+    }
+    env.globals["person_jsonld"] = Markup(json.dumps({k: v for k, v in person_ld.items() if v},
+                                                     ensure_ascii=False).replace("</", "<\\/"))
 
     def render_md(text: str) -> Markup:
         md.reset()
@@ -147,6 +174,8 @@ def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(STATIC, OUT)
+    for css in OUT.rglob("*.css"):
+        css.write_text(minify_css(css.read_text(encoding="utf-8")), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if site.get("cname"):
         (OUT / "CNAME").write_text(site["cname"].strip() + "\n", encoding="utf-8")

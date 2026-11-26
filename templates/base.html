@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% set full_title = site.title if page.url == "/" else page.title ~ " — " ~ site.title %}
   <title>{{ full_title }}</title>
-  <meta name="description" content="{{ page.description or site.description }}">
+  {% set meta_desc = page.seo_description or page.description or site.description %}
+  <meta name="description" content="{{ meta_desc }}">
   {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
-  <link rel="canonical" href="{{ site.origin }}{{ url(page.url) }}">
-  <meta property="og:type" content="website">
+  {% if not page.noindex %}<link rel="canonical" href="{{ site.origin }}{{ url(page.url) }}">{% endif %}
+  <meta property="og:type" content="{{ 'profile' if page.url == '/' else ('article' if page.layout == 'project' else 'website') }}">
   <meta property="og:title" content="{{ full_title }}">
-  <meta property="og:description" content="{{ page.description or site.description }}">
+  <meta property="og:description" content="{{ meta_desc }}">
   <meta property="og:url" content="{{ site.origin }}{{ url(page.url) }}">
   <meta property="og:image" content="{{ site.origin }}{{ url(site.og_image) }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ site.og_image_alt }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="{{ site.author.name }}">
+{% if page.url == "/" %}
+  <script type="application/ld+json">{{ person_jsonld }}</script>
+{% endif %}
   <meta name="theme-color" content="#F7F5F0">
   <link rel="icon" href="{{ url('/favicon.svg') }}" type="image/svg+xml">
   <link rel="preload" href="{{ url('/fonts/inter-latin-400-normal.woff2') }}" as="font" type="font/woff2" crossorigin>

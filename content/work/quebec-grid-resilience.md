@@ -16,6 +16,7 @@ supervisor: Prof. Xiaozhe Wang
 tags: [Energy, Power systems, Modelling]
 tools: [Python, PyPSA, pandapower, OpenStreetMap data, Hydro-Québec open data]
 description: Capstone project — an open model of Québec's 735 and 315 kV grid made to converge in AC power flow at every hour of a winter week, as the base for studying cascading failures in ice and wind storms.
+seo_description: "Capstone project: an open model of Québec's 735 and 315 kV grid made to converge in AC power flow, as the base for studying cascading failures in storms."
 image: { base: /img/projects/capstone-peak-voltages, h: 500, max_w: 1600, alt: "Map of the Québec 735 kV and 315 kV network model, buses coloured by voltage at the January 2022 peak hour", caption: "Our corrected model at the peak hour of the test week (3 January 2022, 17:00): every bus voltage, 735 kV and 315 kV lines.", credit: "Figure: capstone team" }
 gallery_layout: wide
 gallery:

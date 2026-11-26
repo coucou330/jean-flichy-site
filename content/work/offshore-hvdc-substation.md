@@ -17,6 +17,7 @@ supervisor: Outfitting Manager of the project
 tags: [Energy, Offshore wind, Project management]
 tools: [Cross-trade Gantt planning, Controlled document system, Risk assessment]
 description: Internship at Chantiers de l'Atlantique on G36, a 1,250 MW offshore HVDC converter station built for RTE — topside weighing, barge arrival plan, full-scale mock-up.
+seo_description: "Internship at Chantiers de l'Atlantique on G36, a 1,250 MW offshore HVDC converter station for RTE: topside weighing, barge arrival plan, mock-up."
 image: { base: /img/projects/hvdc-lift, h: 500, max_w: 1536, alt: "A tall steel block lined with pipework, lifted by a red-and-white gantry crane at the Saint-Nazaire shipyard", caption: "A block being lifted by the gantry crane at the Saint-Nazaire yard, summer 2026.", credit: "" }
 gallery:
   - { base: /img/projects/hvdc-mockup, h: 1067, max_w: 1536, alt: "Ceiling of the full-scale mock-up: insulation panels, a cable tray and ventilation ducting under a steel deck", caption: "Inside the full-scale mock-up I coordinated: insulation, cable trays and ventilation fitted by several trades before the real installation.", credit: "", tall: true }

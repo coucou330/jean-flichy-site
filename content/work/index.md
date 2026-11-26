@@ -1,6 +1,6 @@
 ---
 title: Work
-description: Projects in energy systems, robotics and research — Jean Flichy.
+description: Projects by Jean Flichy in energy systems, robotics and research — from a model of Québec's grid to an offshore HVDC station and an autonomous sailboat.
 layout: work
 intro: Six projects, from power systems modelling to an offshore converter station, each with a full case study, followed by shorter projects and competitions.
 # Les 6 cartes principales viennent des pages content/work/*.md (champ `order`).

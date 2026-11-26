@@ -1,8 +1,10 @@
 ---
 title: CV
-description: Curriculum vitae of Jean Flichy.
+description: CV of Jean Flichy, electrical engineering student (CentraleSupélec–McGill) heading into energy systems. Two-page PDF to view or download.
 layout: page
 ---
-<!-- Étape 6 : aperçu + téléchargement du PDF (version D7, sans téléphone D8) dans static/cv/Jean_Flichy_CV.pdf -->
+<!-- Étape 6 (26/11) : version D7 (medium) sans téléphone (D8). Copie web : CVs/CV_Jean_Flichy_Masters_medium_web.tex ; GESS « helping to launch » et capstone alignés sur le site. Pour mettre à jour : remplacer static/cv/Jean_Flichy_CV.pdf + static/img/cv/ et la date dans data/cv.yml. -->
 
-The PDF version of my CV will be posted on this page shortly. In the meantime, my profile is on [LinkedIn](https://www.linkedin.com/in/jean-flichy), and I am happy to send my CV [by email](#contact).
+A two-page summary of my studies, projects and experience. Each line is told in more detail in my [projects](/work/) and on the [about page](/about/).
+
+[[include:cv-preview]]

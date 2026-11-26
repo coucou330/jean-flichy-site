@@ -1,0 +1,13 @@
+{% set cv = data.cv %}
+<div class="btn-row cv-actions">
+  <a class="btn btn-primary" href="{{ url(cv.pdf) }}" download>Download the PDF ({{ cv.pages }} pages, {{ cv.size }})</a>
+  <a class="btn btn-secondary" href="{{ url(cv.pdf) }}">Open in the browser</a>
+</div>
+<p class="cv-updated">Last updated: <time datetime="{{ cv.updated }}">{{ cv.updated_text }}</time></p>
+<div class="cv-pages">
+{% for i in range(1, cv.pages + 1) %}
+  <a class="cv-page" href="{{ url(cv.pdf) }}" aria-label="Open page {{ i }} of the CV (PDF)">
+    {% with g = {"base": "/img/cv/cv-page-" ~ i, "alt": "Page " ~ i ~ " of " ~ cv.pages ~ " of Jean Flichy's CV", "h": 1132, "max_w": 1600}, sizes = "(min-width: 960px) 680px, 100vw", eager = (i == 1) %}{% include "partials/picture.html" %}{% endwith %}
+  </a>
+{% endfor %}
+</div>

@@ -291,3 +291,14 @@ html:not(.js-filters) #research:target ~ .work-lists .work-group:not(:has([data-
 .prose td:nth-child(2) { font-weight: 600; color: var(--ink); }
 @media (max-width: 560px) { .prose th, .prose td { padding: var(--space-2); } .prose th:nth-child(1), .prose td:nth-child(1) { min-width: 9rem; } }
 .table-note { color: var(--grey); font-size: var(--step--1); margin-top: 0; }
+
+/* CV page (step 6) */
+.cv-actions { margin-top: var(--space-3); }
+.cv-updated { color: var(--grey); font-size: var(--step--1); margin-top: var(--space-3); }
+.cv-pages { display: grid; gap: var(--space-4); margin-top: var(--space-4); }
+.cv-page { display: block; background: #fff; border: 1px solid var(--line); border-radius: 4px; box-shadow: var(--shadow); overflow: hidden; }
+.cv-page img { display: block; width: 100%; height: auto; }
+.cv-page:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 3px; }
+/* Keep the footer at the bottom of short pages (404, CV on a tall screen) */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; }
