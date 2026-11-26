@@ -2,7 +2,7 @@
 title: Work
 description: Projects by Jean Flichy in energy systems, robotics and research — from a model of Québec's grid to an offshore HVDC station and an autonomous sailboat.
 layout: work
-intro: Six projects, from power systems modelling to an offshore converter station, each with a full case study, followed by shorter projects and competitions.
+intro: Seven projects, from power systems modelling to an offshore converter station and a student association, each with a full case study, followed by CentraleSupélec project weeks, shorter projects and competitions.
 # Les 6 cartes principales viennent des pages content/work/*.md (champ `order`).
 # Filtres (PLAN §5) : Energy · Robotics · Leadership · Research — attribués par le champ `filters`.
 filters: [Energy, Robotics, Leadership, Research]
@@ -36,7 +36,7 @@ more:
     # image : diapo 23 de la présentation INTG215 (SHOTLIST #17)
     # src : présentation INTG215 (sources/2026-11-23) ; INVENTAIRE I ; rôle CTO et CFO (Jean, 23/11)
   - title: VizAdrift — could a boat drift home to France?
-    meta: CentraleSupélec Modelling Week · two weeks
+    meta: CentraleSupélec project week · Year 1 Modelling Week · two weeks
     year: "2024"
     summary: We studied North Atlantic weather regimes in historical data, coded a low-order atmospheric model (Charney–DeVore) in Python, measured its predictability with Lyapunov exponents and turned it into winds pushing a kite-towed boat from Montréal. Under a stable blocking regime it never reaches France; with westerly winds it can, in 35 to 100 days.
     tags: [Modelling, Weather]
@@ -45,7 +45,7 @@ more:
     # image : diapo 29 de la présentation VizAdrift (SHOTLIST #20)
     # src : présentation finale VizAdrift (sources/2026-11-23). ⚠️ « validé sur 30 ans de données » retiré (cité comme amélioration future).
   - title: FloodViz — urban flooding
-    meta: Coding Weeks, with Onepoint Bordeaux · two weeks
+    meta: CentraleSupélec project week · Coding Weeks, with Onepoint Bordeaux · two weeks
     year: "2023"
     summary: A Python tool that models urban flooding, optimises the sewer network and visualises the result. Winning team of the Coding Weeks; we presented it to the whole Onepoint team.
     tags: [Python, Water]
@@ -53,7 +53,7 @@ more:
     image: { base: /img/projects/floodviz-onepoint, h: 600, max_w: 1536, alt: "Students presenting slides titled Algorithm to an audience in Onepoint's offices" }
     # src : CV ETH (winning team) ; Jean (22/11) : présenté devant tout Onepoint ; photo du 17/11/2023. ⚠️ nom exact du prix : non publié
   - title: Radar modelling with Thales
-    meta: CentraleSupélec Modelling Week · team of three · two weeks
+    meta: CentraleSupélec project week · Data & Modelling Week · team of three · two weeks
     year: "2024–25"
     summary: Electronic beam steering for a coastal radar. We modelled a phased array, computed the phase shifts needed to sweep ±45° in azimuth, and cut the array to 24 emitters over 4 m — a full sweep in 0.036 s. A Hann window on the emitters limits false echoes from strong reflectors off to the side. Visiting Thales's radar site in Limours made me choose electrical engineering.
     tags: [Electromagnetism, Simulation]
@@ -62,11 +62,12 @@ more:
     # image : diapo 17 de la présentation radar (SHOTLIST #15), recadrée sur le diagramme
     # src : sources/2026-11-23/RADAR_beam_deflection_Thales_Modelling_Week.pdf ; année : 2e année (2024-25), Jean (23/11) → « 2025 »
   - title: Robotics Bootcamp — winning team
-    meta: CentraleSupélec · one week
+    meta: CentraleSupélec project week · Year 2 · one week
+    year: "2024"
     summary: A robot that follows a line, avoids obstacles and follows a person.
     tags: [Robotics]
     filters: [Robotics]
-    # ⚠️ année non confirmée : non affichée
+    # année : Academic Record Summary (GEAC 212, automne 2024)
   - title: Motor Challenge — winning team
     meta: CentraleSupélec Physics Challenge
     year: "2025"

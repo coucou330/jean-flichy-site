@@ -27,7 +27,7 @@
     {% if page.more %}
     <section class="work-group" aria-labelledby="more">
       <h2 class="section-title" id="more">More projects</h2>
-      <p class="section-intro">Shorter projects, bootcamps and competitions.</p>
+      <p class="section-intro">Shorter projects: CentraleSupélec project weeks (see <a href="{{ url('/about/#project-weeks') }}">the list</a>), course projects and competitions.</p>
       <ul class="cards cards-compact">
       {% set show_media = False %}
       {% for p in page.more %}{% with heading = "h3", compact = True %}{% include "partials/card.html" %}{% endwith %}{% endfor %}

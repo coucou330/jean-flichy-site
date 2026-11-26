@@ -6,6 +6,7 @@ layout: page
 toc:
   - { title: Why energy, id: why-energy }
   - { title: Education, id: education }
+  - { title: Project weeks, id: project-weeks }
   - { title: Path, id: path }
   - { title: Leadership, id: leadership }
   - { title: Teaching, id: teaching }
@@ -40,8 +41,38 @@ I want to become an engineer who can take — and defend — the decisions that 
 **McGill University**, Montréal — Bachelor of Global Engineering, Electrical (Years 3–4), since September 2025; expected graduation May 2027. Cumulative GPA 3.87/4.00. Student representative for the Electrical stream.
 <!-- src : CV ETH -->
 
-**CentraleSupélec**, Gif-sur-Yvette — Bachelor of Global Engineering (Years 1–2), 2023–25. Multidisciplinary engineering taught in English, with a mathematics and physics core equivalent to the French *classes préparatoires*. Ranked 3rd of 80 after Year 1; Year 2 GPA 4.00/4.00.
-<!-- src : CV ETH ; INVENTAIRE A -->
+**CentraleSupélec**, Gif-sur-Yvette — Bachelor of Global Engineering (Years 1–2), 2023–25. Multidisciplinary engineering taught in English, with a mathematics and physics core equivalent to the French *classes préparatoires*. Ranked 3rd of 80 after Year 1; GPA 3.93/4.00 over the two years, 4.00/4.00 in Year 2.
+<!-- src : CV ETH ; INVENTAIRE A ; « Academic Record Summary » (16/10/2026, intitulés des cours uniquement — aucune note par cours publiée) ; brief référents (3.93) -->
+
+Two years at CentraleSupélec covered:
+
+- **Mathematics:** three analysis courses, linear algebra, topology and functional analysis, probability.
+- **Physics and engineering:** classical mechanics, electric circuits, thermodynamics, physics of waves, two electromagnetism courses (conduction, then waves), automation and control.
+- **Computing:** programming, algorithms, information systems, advanced programming and machine learning.
+- **Chemistry and biology:** from atomistics and electrochemistry to cell biology, genetics, bioengineering and ecosystems.
+- **Humanities and management:** philosophy and ethics, international sustainable development, modern geopolitics, economics of corporations and two project management courses, plus a modern language every term.
+
+### Project weeks {#project-weeks}
+
+Each year, the timetable stopped several times for an intensive week or a longer team project, often with a company or a laboratory:
+
+<div class="table-wrap" markdown="1">
+
+| When | Format | What we did |
+|---|---|---|
+| Nov. 2023 | Coding Weeks (two weeks, with Onepoint) | [FloodViz](/work/#more), a Python tool that simulates urban flooding — winning team |
+| Feb. 2024 | Modelling Week | [VizAdrift](/work/#more): could a kite-towed boat drift from Montréal to France? |
+| 2024 | Year 1 entrepreneurship project (three months) | [C-Blade](/work/#more), wing sails for cargo ships |
+| Summer 2024 | Social-impact internship | [Used cooking oil and biofuels](/work/used-cooking-oil-biofuels/), Climate Economics Chair |
+| Autumn 2024 | Robotics Bootcamp (one week) | A line-following, obstacle-avoiding robot — winning team |
+| Autumn 2024 | Data & Modelling Week, with Thales | [Radar beam steering](/work/#more) for a coastal radar |
+| Winter 2025 | Organisational Behaviour Week, Business Games Week | Two intensive weeks on management |
+| Spring 2025 | Physics Challenge | Motor Challenge — winning team |
+| Jan.–July 2025 | Research & design project, L2S laboratory | [JojjoBot](/work/jojjobot-autonomous-sailboat/), an autonomous sailboat |
+| Summer 2025 | Enterprise-discovery internship | [Flying Whales](/work/airship-weather-operability/), weather operability for a cargo airship |
+
+</div>
+<!-- src : Academic Record Summary (GECS 112 Coding Weeks, GEMO 111 Introduction to Modelling, GEAC 212 Robotics Bootcamp, GEMO 211 Data & Modelling Week, GEEC 221/223, GEPR 221, GEIN 121/221) ; INVENTAIRE ; Drive « Physics challenge » (avril 2025). ⚠️ C-Blade = GEPR 121 « Project – Sustainable Development » ? non affirmé. -->
 
 The programme is new: my year is its first cohort, which is why so much of my time has gone into building its student life and representing it (see [Leadership](#leadership)).
 
@@ -60,7 +91,7 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
 
 - **McGill Robotics — Team Captain (since 2026), member since 2025.** I co-lead a 220-student team building three robots: a drone, a Mars rover and an autonomous underwater vehicle. We manage a CAD 100k budget, balanced for the first time after a CAD 30k deficit, and have raised more than CAD 25,000 so far this year. I also lead the hydrophone sub-team. [More →](/work/mcgill-robotics/)
   <!-- src : CV ETH -->
-- **Bureau des Bachelors, CentraleSupélec — co-founder and President (Nov. 2023 – Feb. 2025).** As the first cohort, we had no student association of our own. With a team of 17 we wrote the statutes, managed a EUR 40k budget for 240 students and organised the first edition of every Bachelor event: welcome week, gala and ski trip. I also wrote internal rules and a handover guide; the association still runs today with new committees.
+- **Bureau des Bachelors, CentraleSupélec — co-founder and President (Nov. 2023 – Feb. 2025).** As the first cohort, we had no student association of our own. With a team of 17 we wrote the statutes, managed a EUR 40k budget for 240 students and organised the first edition of every Bachelor event: two Welcome Weeks with a dozen events, a gala and a first ski trip for about forty students, for which the school aligned the holidays of its two Bachelor programmes. I also wrote internal rules and a handover guide; the association still runs today with new committees. [More →](/work/bureau-des-bachelors/)
   <!-- src : lettre bourse CS Alumni ; CV ETH -->
 - **Representing the programme.** I represented the Bachelor before the CTI, France's engineering accreditation body, took part in many course evaluation meetings and coordinated a feedback report for the programme's management. I went back to my former school to present the programme to pupils choosing their studies.
   <!-- src : lettre bourse CS Alumni -->

@@ -30,7 +30,7 @@ why_energy: |
 # Leadership : CV ETH ; lettre bourse CS Alumni (04/11/2026) ; INVENTAIRE D.
 leadership:
   - { title: McGill Robotics, url: /work/mcgill-robotics/, text: "Team Captain since 2026 of a 220-student team; a CAD 100k budget, balanced for the first time after a CAD 30k deficit." }
-  - { title: Bureau des Bachelors, url: /about/#leadership, text: "Co-founded and chaired the first student association of CentraleSupélec's Bachelor (team of 17, EUR 40k budget, 240 students)." }
+  - { title: Bureau des Bachelors, url: /work/bureau-des-bachelors/, text: "Co-founded and chaired the first student association of CentraleSupélec's Bachelor (team of 17, EUR 40k budget, 240 students)." }
   - { title: Student representation, url: /about/#leadership, text: "Represented the programme before the CTI, France's engineering accreditation body; helping to launch GESS, McGill's Global Engineering student society." }
 # GESS : « helping to launch » (Jean, 23/11). Voyages : Jean (23/11), Interrail annuel Grèce → cap Nord, Canaries sans avion.
 # Beyond : CV ETH (Interests) ; scouts 2012-24 : CV ETH ; marathon Beneva (Jean, 22/11). Photo voile : IMG_5518 (a-trier, 21/08/2026).
