@@ -1,7 +1,7 @@
 # Figures insérées dans le Markdown avec [[figure:clé]] ou [[figures:clé1,clé2]].
 # Photos déposées par Jean dans 03 Assets/a-trier/ (22/11), EXIF retirés.
 night-batteries: { base: /img/about/night-batteries, h: 600, max_w: 1600, alt: "Battery compartment of a sailing yacht at night: two blue batteries, cables and a multimeter", caption: "The battery compartment during that night, multimeter at hand.", credit: "" }
-sailing-dolphin: { base: /img/about/sailing-dolphin, h: 600, max_w: 1600, alt: "Dolphin leaping beside the bow of a sailing yacht on a calm sea", caption: "A dolphin off the bow between Marseille and the Canary Islands, August 2026.", credit: "" }
+sailing-dolphin: { base: /img/about/sailing-dolphin, h: 600, max_w: 1600, alt: "Dolphin leaping beside the bow of a sailing yacht on a calm sea", caption: "A dolphin off the bow, Marseille → Canary Islands, August 2026.", credit: "" }
 regatta-le-havre: { base: /img/about/regatta-le-havre, h: 600, max_w: 1422, alt: "A student sailing crew posing behind a Le Havre banner under a tent", caption: "Our crew at the Voiles Étudiantes du Havre (2nd place).", credit: "" }
 rugby: { base: /img/about/rugby, h: 600, max_w: 1600, alt: "A rugby team posing on a pitch", caption: "With my rugby team.", credit: "" }
 marathon: { base: /img/about/marathon, h: 599, max_w: 1153, alt: "Three runners wearing marathon finisher medals", caption: "Finishers of the Beneva Montréal Marathon, 2026.", credit: "" }

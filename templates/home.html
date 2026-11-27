@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block main %}
 {% set h = page.hero %}
-<div class="hero-band sheet">
 <section class="hero wrap">
   <div class="hero-text">
-    <p class="eyebrow">{{ h.kicker }}</p>
     <h1 class="hero-name">{{ h.name }}</h1>
     <p class="hero-tagline">{{ h.tagline }}</p>
     <p class="hero-meta">{{ h.meta }}</p>
@@ -16,59 +14,55 @@
     {% endfor %}
     </p>
   </div>
-  <figure class="hero-portrait">
-    <picture class="marks">
-      <source type="image/webp" srcset="{{ url(h.portrait.base ~ '-400.webp') }} 400w, {{ url(h.portrait.base ~ '-800.webp') }} 800w" sizes="(min-width: 960px) 280px, 150px">
-      <img src="{{ url(h.portrait.base ~ '-400.jpg') }}" srcset="{{ url(h.portrait.base ~ '-400.jpg') }} 400w, {{ url(h.portrait.base ~ '-800.jpg') }} 800w" sizes="(min-width: 960px) 280px, 150px" width="400" height="500" alt="{{ h.portrait.alt }}" fetchpriority="high">
-    </picture>
-  </figure>
+  <picture class="hero-portrait">
+    <source type="image/webp" srcset="{{ url(h.portrait.base ~ '-400.webp') }} 400w, {{ url(h.portrait.base ~ '-800.webp') }} 800w" sizes="(min-width: 960px) 320px, 160px">
+    <img src="{{ url(h.portrait.base ~ '-400.jpg') }}" srcset="{{ url(h.portrait.base ~ '-400.jpg') }} 400w, {{ url(h.portrait.base ~ '-800.jpg') }} 800w" sizes="(min-width: 960px) 320px, 160px" width="400" height="500" alt="{{ h.portrait.alt }}" fetchpriority="high">
+  </picture>
 </section>
-{% if page.key_figures %}
-<div class="wrap">
-  <table class="parts">
-    <caption class="label">Key figures</caption>
-    <thead><tr><th scope="col">No.</th><th scope="col">Figure</th><th scope="col">What it refers to</th></tr></thead>
-    <tbody>
-    {% for t in page.key_figures %}
-      <tr><td class="no">{{ '%02d' % loop.index }}</td><td class="val">{{ t.value }}</td><td>{{ t.label }}</td></tr>
-    {% endfor %}
-    </tbody>
-  </table>
-</div>
+
+{% if page.tiles %}
+<section class="wrap section" aria-labelledby="glance">
+  <h2 class="eyebrow" id="glance">At a glance</h2>
+  <ul class="tiles">
+  {% for t in page.tiles %}
+    <li class="tile"><span class="tile-value">{{ t.value }}</span><span class="tile-label">{{ t.label }}</span></li>
+  {% endfor %}
+  </ul>
+</section>
 {% endif %}
-</div>
 
 {% if projects %}
 <section class="wrap section" aria-labelledby="selected-work">
-  <div class="sec-head">
-    <h2 class="section-title" id="selected-work"><span class="sec-no" aria-hidden="true">01</span>Selected work</h2>
-    {% if '/work/' in live_urls %}<a class="section-link" href="{{ url('/work/') }}">All {{ projects | length }} projects and shorter ones</a>{% endif %}
+  <div class="section-head">
+    <h2 class="section-title" id="selected-work">Selected work</h2>
+    {% if '/work/' in live_urls %}<a class="section-link" href="{{ url('/work/') }}">All projects →</a>{% endif %}
   </div>
-  <ol class="index">
-  {% for p in projects[:6] %}{% with num = loop.index %}{% include "partials/row.html" %}{% endwith %}{% endfor %}
-  </ol>
+  <ul class="cards">
+  {% set show_media = all_media(projects[:6]) %}
+  {% for p in projects[:6] %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+  </ul>
 </section>
 {% endif %}
 
 {% if page.why_energy %}
 <section class="wrap section section-split" aria-labelledby="why-energy">
-  <h2 class="section-title" id="why-energy"><span class="sec-no" aria-hidden="true">02</span>Why energy</h2>
+  <h2 class="section-title" id="why-energy">Why energy</h2>
   <div class="prose">{{ page.why_energy | md }}
-    {% if '/about/' in live_urls %}<p><a href="{{ url('/about/#why-energy') }}">The longer version is on my about page.</a></p>{% endif %}
+    {% if '/about/' in live_urls %}<p><a href="{{ url('/about/#why-energy') }}">More about me →</a></p>{% endif %}
   </div>
 </section>
 {% endif %}
 
 {% if data.path %}
 <section class="wrap section section-split" aria-labelledby="path">
-  <h2 class="section-title" id="path"><span class="sec-no" aria-hidden="true">03</span>Path</h2>
+  <h2 class="section-title" id="path">Path</h2>
   <div>{% include "partials/path.html" %}</div>
 </section>
 {% endif %}
 
 {% if page.leadership %}
 <section class="wrap section section-split" aria-labelledby="leadership">
-  <h2 class="section-title" id="leadership"><span class="sec-no" aria-hidden="true">04</span>Leadership and community</h2>
+  <h2 class="section-title" id="leadership">Leadership &amp; community</h2>
   <ul class="rows">
   {% for l in page.leadership %}
     <li class="row"><span class="row-title">{% if l.url %}<a href="{{ url(l.url) }}">{{ l.title }}</a>{% else %}{{ l.title }}{% endif %}</span> <span class="row-text">{{ l.text }}</span></li>
@@ -79,11 +73,11 @@
 
 {% if page.beyond %}
 <section class="wrap section section-split" aria-labelledby="beyond">
-  <h2 class="section-title" id="beyond"><span class="sec-no" aria-hidden="true">05</span>Beyond engineering</h2>
+  <h2 class="section-title" id="beyond">Beyond engineering</h2>
   <div>
     {% if page.beyond_image %}
     <figure class="figure beyond-figure">
-      {% with g = page.beyond_image, sizes = "(min-width: 960px) 760px, 100vw" %}{% include "partials/picture.html" %}{% endwith %}
+      {% with g = page.beyond_image, sizes = "(min-width: 960px) 680px, 100vw" %}{% include "partials/picture.html" %}{% endwith %}
       {% if page.beyond_image.caption %}<figcaption>{{ page.beyond_image.caption }}</figcaption>{% endif %}
     </figure>
     {% endif %}

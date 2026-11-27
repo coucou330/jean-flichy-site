@@ -1,0 +1,27 @@
+{# Project card. Expects `p` (project page or "more" item), `heading`, and `show_media`
+   (media band shown only when every card of the grid has an image or a placeholder, so rows stay even).
+   Compact cards ("More projects") show a small thumbnail instead when they have an image. #}
+{% set linked = p.url and p.url in live_urls %}
+{% set band = show_media and (p.image or p.placeholder) %}
+<li class="card{% if linked %} is-linked{% endif %}{% if not band %} no-media{% endif %}{% if compact and p.image %} has-thumb{% endif %}" data-filters="{{ (p.filters or []) | map('lower') | join(' ') }}">
+  {% if band and p.image %}
+  <picture class="card-media">
+    <source type="image/webp" srcset="{{ url(p.image.base ~ '-800.webp') }} 800w, {{ url(p.image.base ~ '-1600.webp') }} {{ p.image.max_w or 1600 }}w" sizes="(min-width: 960px) 360px, (min-width: 640px) 50vw, 100vw">
+    <img src="{{ url(p.image.base ~ '-800.jpg') }}" alt="{{ p.image.alt }}" loading="lazy" decoding="async" width="800" height="500">
+  </picture>
+  {% elif band %}
+  <div class="card-media card-placeholder" aria-hidden="true"><span>{{ p.placeholder }}</span></div>
+  {% endif %}
+  {% if compact and p.image %}
+  <picture class="card-thumb">
+    <source type="image/webp" srcset="{{ url(p.image.base ~ '-800.webp') }}">
+    <img src="{{ url(p.image.base ~ '-800.jpg') }}" alt="{{ p.image.alt }}" loading="lazy" decoding="async" width="800" height="{{ p.image.h or 600 }}">
+  </picture>
+  {% endif %}
+  <div class="card-body">
+    <p class="card-meta">{{ p.card_meta or p.meta }}{% if p.year %} · <span class="card-year">{{ p.year }}</span>{% endif %}</p>
+    <{{ heading }} class="card-title">{% if linked %}<a href="{{ url(p.url) }}">{{ p.card_title or p.title }}</a>{% else %}{{ p.card_title or p.title }}{% endif %}</{{ heading }}>
+    <p class="card-summary">{{ (p.card_summary or p.summary) | inline_md }}</p>
+    {% if p.tags %}<ul class="tags" aria-label="Tags">{% for tag in p.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</li>
