@@ -4,11 +4,12 @@ description: Electrical engineering student (CentraleSupélec–McGill) heading 
 lang: en-GB
 
 # Public address of the site, WITHOUT trailing slash.
-#   GitHub Pages (today):  origin https://coucou330.github.io  +  base_url /jean-flichy-site
+#   GitHub Pages (today):  origin https://flichy-jean.github.io  +  base_url ""   (repo flichy-jean/flichy-jean.github.io)
+#   Project page (before 27/11): origin https://coucou330.github.io  +  base_url /jean-flichy-site
 #   Own domain (later):    origin https://www.example.com      +  base_url ""   (empty)
 # base_url can also be overridden at build time: BASE_URL= python build.py
-origin: https://coucou330.github.io
-base_url: /jean-flichy-site
+origin: https://flichy-jean.github.io
+base_url: ""
 
 author:
   name: Jean Flichy
