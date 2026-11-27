@@ -52,7 +52,7 @@ The underwater vehicle locates an acoustic pinger, which emits between 25 and 40
 <!-- src : Jean (25/11) : hydrophone lead cette année, supervise les 4 nouveaux membres ; problème compris, PCB designé, en phase de test. -->
 - **Circuit.** A preamplifier, four band-pass filter stages and an output amplifier, built around op-amps.
 - **Simulation.** In my LTspice model, the chain gives about 60 dB of gain across the 25–40 kHz band, while a 1 kHz signal comes out more than 100 dB lower. I also checked the design in MATLAB.
-- **This year, as hydrophone lead,** I supervise four new members. We have pinned down the whole problem, designed a PCB for the shield and are now testing it.
+- **This year, as hydrophone lead,** I supervise four new members. We have worked through the problem, designed a PCB for the shield and are now testing it.
 
 [[figure:robotics-shield-response]]
 <!-- src : CV ETH (25–40 kHz, MATLAB/LTspice, tests en cours) ; shield_simulation.asc (U1 gain 10 → 4 étages passe-bande à contre-réaction multiple U2-U5 → U6 gain 10) ; shield_simulation.raw (AC 1 k–100 kHz : ≈ 60,6 dB à 25 kHz, 59,6 dB à 32 kHz, 58,6 dB à 40 kHz ; −58,8 dB à 1 kHz, soit ≈ 119 dB sous la bande ; nœud de sortie identifié par Claude d'après le schéma). -->

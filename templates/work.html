@@ -5,7 +5,7 @@
   {% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
 
   {# Filters: work without JavaScript through :target anchors; JS (below) avoids the jump and updates the count. #}
-  {% for f in page.filters %}<span class="filter-target" id="{{ f | lower }}"></span>{% endfor %}
+  <span class="filter-target" id="all"></span>{% for f in page.filters %}<span class="filter-target" id="{{ f | lower }}"></span>{% endfor %}
   <nav class="filters" aria-label="Filter projects by theme">
     <span class="filters-label">Filter:</span>
     <ul>

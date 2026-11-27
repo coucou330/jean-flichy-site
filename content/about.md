@@ -22,7 +22,7 @@ I like problems where the physics, the schedule and the people all matter at onc
 ## Why energy {#why-energy}
 
 One night in summer 2026, sixty nautical miles off the Spanish coast, the battery alarm woke our crew of four. The engine would not start and there was water in the bilge. My first decision was to cut all the power. I then spent the night between panels with a multimeter, found the leak, isolated the swollen engine battery and rerouted the starter onto the house bank. By morning the engine ran and the lights were back.
-<!-- src : « Claude statement.md » (lettre ETH) ; publication validée par Jean le 22/11 -->
+<!-- src : lettre ETH ; publication validée par Jean le 22/11 -->
 
 [[figure:night-batteries]]
 
@@ -78,7 +78,7 @@ The programme is new: my year is its first cohort, which is why so much of my ti
 
 Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamentals of power engineering (ECSE 362), both graded A at McGill, after an A in every electromagnetism course at CentraleSupélec.
 <!-- src : INVENTAIRE A (mémoire, candidature TA) -->
-<!-- ⚠️ Lettre ETH : « 19.7/20 in electromagnetism and 19.2/20 in control at CentraleSupélec », « top two in Prof. Massol's energy economics course » — à confirmer avant publication -->
+<!-- ⚠️ Lettre ETH : notes par cours et classement en économie de l'énergie — à confirmer avant publication (détail dans INVENTAIRE H, hors dépôt) -->
 
 **Lycée Saint-Louis-de-Gonzague**, Paris — French Baccalauréat (mathematics and physics), 2023: 17.84/20, highest honours (*mention Très bien*).
 <!-- src : CV ETH -->
@@ -91,7 +91,7 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
 
 - **McGill Robotics — Team Captain (since 2026), member since 2025.** I co-lead a 220-student team building three robots: a drone, a Mars rover and an autonomous underwater vehicle. We manage a CAD 100k budget, balanced for the first time after a CAD 30k deficit, and have raised more than CAD 25,000 so far this year. I also lead the hydrophone sub-team. [More →](/work/mcgill-robotics/)
   <!-- src : CV ETH -->
-- **Bureau des Bachelors, CentraleSupélec — co-founder and President (Nov. 2023 – Feb. 2025).** As the first cohort, we had no student association of our own. With a team of 17 we wrote the statutes, managed a EUR 40k budget for 240 students and organised the first edition of every Bachelor event: two Welcome Weeks with a dozen events, a gala and a first ski trip for about forty students, for which the school aligned the holidays of its two Bachelor programmes. I also wrote internal rules and a handover guide; the association still runs today with new committees. [More →](/work/bureau-des-bachelors/)
+- **Bureau des Bachelors, CentraleSupélec — co-founder and President (Nov. 2023 – Feb. 2025).** As the first cohort, we had no student association of our own. With a team of 17 we wrote the statutes, managed a EUR 40k budget for 240 students and organised the first edition of every Bachelor event: two Welcome Weeks with a dozen events, a gala and a first ski trip, for which the school aligned the holidays of its two Bachelor programmes. I also wrote internal rules and a handover guide; the association still runs today with new committees. [More →](/work/bureau-des-bachelors/)
   <!-- src : lettre bourse CS Alumni ; CV ETH -->
 - **Representing the programme.** I represented the Bachelor before the CTI, France's engineering accreditation body, took part in many course evaluation meetings and coordinated a feedback report for the programme's management. I went back to my former school to present the programme to pupils choosing their studies.
   <!-- src : lettre bourse CS Alumni -->
@@ -106,7 +106,7 @@ Courses I enjoyed most: electromagnetic fields and waves (ECSE 353) and fundamen
   <!-- src : CV ETH ; INVENTAIRE B -->
 - **Flipped class on Brownian motion** — prepared and taught two sessions to my classmates with Brice Hannebicque (CentraleSupélec, 2023–25).
   <!-- src : INVENTAIRE B -->
-- **Mock baccalauréat** — invigilator and grader of physics-chemistry mock exams at Lycée Saint-Louis-de-Gonzague (2020–25).
+- **Mock baccalauréat** — invigilator and marker of physics and chemistry mock exams at Lycée Saint-Louis-de-Gonzague (2020–25).
   <!-- src : CV ETH ; INVENTAIRE B -->
 - **ARPEJ 14** — mentor to two pupils who were struggling at school (Sept. 2022 – March 2023).
   <!-- src : INVENTAIRE B -->

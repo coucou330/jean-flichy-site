@@ -35,7 +35,7 @@ A first group presented the Bureau des Bachelors project in October 2023: around
 - **Wrote the rules.** With the team I wrote the statutes, and I wrote the internal rules, so that the association could hold elections and outlive its founders.
 - **Ran the first Welcome Weeks (September 2024).** Two weeks of events for incoming Bachelors, from a membership drive to a closing ceremony. Each event went through the campus services with a project file and a site plan, plus a rain plan B for outdoor events. For the largest ones we added a safety file, a contracted first-aid team, a temporary drinks licence, a participant charter and parental consent for minors, collected online on a platform our IT team built.
 - **Worked with the administration.** In October 2024 we presented our feedback on the Welcome Weeks, the association's structure, the upcoming elections and our plans to the programme management. We asked for the February holidays of the two programmes to be aligned so that both could join the ski trip, and they were.
-- **Organised the first Bachelor ski trip.** Four days in Risoul, in the French Alps, in February 2025, with about forty students. We compared four tour operators, negotiated the quote and built the budget around a worst case of 30 empty seats; participants signed a commitment before we signed the contract, and we applied for school and student-life funding to lower the price.
+- **Organised the first Bachelor ski trip.** Four days in Risoul, in the French Alps, in February 2025. We compared four tour operators, negotiated the quote and built the budget around a worst case of 30 empty seats; participants signed a commitment before we signed the contract, and we applied for school and student-life funding to lower the price.
 - **Handed over.** With the team, I wrote a handover guide for the next bureau: how student life at CentraleSupélec is organised, where funding comes from, who to ask for what, how to run an event from A to Z, and detailed notes on the Welcome Weeks and the ski trip.
 
 [[include:diagram-bdb-welcome]]
@@ -45,7 +45,6 @@ A first group presented the Bureau des Bachelors project in October 2023: around
 - **The first edition of every Bachelor event** for 240 students: Welcome Weeks, gala and ski trip, with a team of 17 and a EUR 40k budget.
 - **Two programmes brought together.** The ski trip mixed Global Engineering and AIDAMS students, who otherwise rarely meet, after the school aligned their holidays.
 - **An association that outlived us.** The statutes, internal rules and handover guide are still in use; new teams kept organising the Welcome Weeks, including in 2026.
-- **A CentraleSupélec merit scholarship for student representative engagement**, one of my five merit awards.
 
 ## What I learned
 

@@ -1,6 +1,6 @@
 ---
 # Étape 4 (24/11) : étude de cas complète (brouillon + rapport EIP, faits ✅ INVENTAIRE B et H).
-# Photos : Jean, 22/11 — pas besoin de l'accord d'Antoine Fandeux (D4). Photo #1 (pont de paquebot) écartée : ce n'est pas G36.
+# Photos : Jean, 22/11 — pas besoin de l'accord de l'encadrant (D4). Photo #1 (pont de paquebot) écartée : ce n'est pas G36.
 title: Offshore HVDC converter station
 subtitle: Planning and cross-trade coordination on a 1,250 MW platform for RTE
 layout: project
@@ -25,7 +25,7 @@ gallery:
   - { base: /img/projects/hvdc-testbench, h: 600, max_w: 1600, alt: "Galvanised strut assemblies laid out on cardboard next to open tins of coating and brushes", caption: "Test bench for replacing a carcinogenic anti-corrosion product: assemblies coated with different methods before a two-year exposure test.", credit: "" }
   - { base: /img/projects/hvdc-yard, h: 1067, max_w: 1600, alt: "The shipyard's red-and-white gantry cranes above a quay lined with steel racks and a mobile crane", caption: "The Saint-Nazaire yard, May 2026.", credit: "" }
 ---
-<!-- src générale : rapport EIP (CVs/Old/Jean.Flichy – EIP Semester Report SUMMER 2026.docx) ; CV ETH. D4 : photos publiables (Jean, 22/11). Encadrant non nommé (PLAN §11). Jamais : dates internes (15 août), coûts, noms de fournisseurs. -->
+<!-- src générale : rapport EIP (CVs/Old/Jean.Flichy – EIP Semester Report SUMMER 2026.docx) ; CV ETH. D4 : photos publiables (Jean, 22/11). Encadrant non nommé (PLAN §11). Jamais : dates internes, coûts, noms de fournisseurs. -->
 
 **TL;DR** — I spent the summer of 2026 on G36, one of two offshore converter stations Chantiers de l'Atlantique is building for RTE. My subjects cut across several trades, so nobody owned them: the weighing of the topside, the arrival plan for the barge, the full-scale mock-up and the replacement of a carcinogenic product. I coordinated them, and the industrial director adopted one of my planning options.
 
@@ -52,7 +52,7 @@ The outfitting team sits between the design office and the site: it reviews plan
 
 - The industrial director adopted one of our options for the barge arrival — bring the barge in earlier and move part of the work upstream — so that the industrial milestones hold.
 - The weighing specification was updated and presented to the sourcing committee.
-- The two-year corrosion test is running and will settle with evidence a question nobody could answer before.
+- The two-year field test I designed will settle, with evidence, a question nobody could answer before.
 - My procedures and instructions were issued in the project's controlled document system (reference, revision, writer, checker, approver).
 <!-- src : rapport EIP. « barge plus tôt, travaux en Pologne et sur la Loire » résumé sans détail interne. -->
 

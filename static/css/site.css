@@ -207,6 +207,7 @@ a:hover { color: var(--ink); }
 /* Default state (no filter): "All" looks active */
 html:not(.js-filters) .filters a[href="#all"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 html:not(.js-filters) .filter-target:target ~ .filters a[href="#all"] { background: var(--surface); border-color: var(--line); color: var(--ink); }
+html:not(.js-filters) #all:target ~ .filters a[href="#all"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 html:not(.js-filters) #energy:target ~ .filters a[href="#energy"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 html:not(.js-filters) #energy:target ~ .work-lists .card:not([data-filters~="energy"]) { display: none; }
 html:not(.js-filters) #energy:target ~ .work-lists .work-group:not(:has([data-filters~="energy"])) { display: none; }

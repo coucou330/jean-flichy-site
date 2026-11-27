@@ -21,7 +21,7 @@ tiles:
   - { value: "Marseille → Canaries", label: "offshore sailing passage, summer 2026" }
 # Selected work : les 6 pages projets (content/work/*.md, champ `order`).
 # Why energy : récit de la panne en mer validé par Jean le 22/11.
-# Sources : lettre ETH (« Claude statement.md ») et brouillon home.md ; rapport EIP (1 250 MW, RTE) ; CV ETH (capstone).
+# Sources : lettre ETH et brouillon home.md ; rapport EIP (1 250 MW, RTE) ; CV ETH (capstone).
 why_energy: |
   One night in summer 2026, sixty nautical miles off the Spanish coast, the battery alarm went off on the boat taking us from Marseille to the Canary Islands. The engine would not start and there was water in the bilge, so we cut all the power. I spent the night between panels with a multimeter, found the leak, isolated the dead battery and brought the power back.
 

@@ -19,7 +19,7 @@ tags: [Robotics, Control, Embedded systems]
 tools: [Python, Raspberry Pi, I²C / UART / PWM, MATLAB/Simulink, FREE!ship]
 description: JojjoBot — leading a team of four on an autonomous sailboat at the L2S laboratory; sensors, embedded Python on a Raspberry Pi and a controller ported from Simulink.
 seo_description: "JojjoBot: leading a team of four on an autonomous sailboat at the L2S laboratory, with sensors, embedded Python and a controller ported from Simulink."
-image: { base: /img/projects/jojjobot-hull, h: 500, max_w: 1600, alt: "Open 3D-printed hull of the small sailboat on a lab bench, with green brackets holding the electronics and a servo", caption: "The hull with its electronics installed, June 2025.", credit: "" }
+image: { base: /img/projects/jojjobot-hull, h: 500, max_w: 1600, alt: "Open hull of the small sailboat on a lab bench, with green 3D-printed brackets holding the electronics and a servo", caption: "The hull with its electronics installed, June 2025.", credit: "" }
 gallery:
   - { base: /img/projects/jojjobot-bench, h: 600, max_w: 1600, alt: "Raspberry Pi, sensors and wiring on a cutting mat next to a laptop showing Python code", caption: "Integrating the sensors and the embedded Python code on the bench, April 2025.", credit: "" }
   - { base: /img/projects/jojjobot-hull-cad, h: 461, max_w: 864, alt: "Four views of the redesigned hull in the FREE!ship design software: perspective, profile, plan and body plan", caption: "The hull redesigned from 45 to 60 cm, after the plans of the RG65 radio-controlled class, to fit the electronics.", credit: "Figure: JojjoBot team" }
