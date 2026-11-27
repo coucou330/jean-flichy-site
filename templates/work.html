@@ -5,9 +5,10 @@
   {% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
 
   {# Filters: work without JavaScript through :target anchors; JS (below) avoids the jump and updates the count. #}
-  <span class="filter-target" id="all"></span>{% for f in page.filters %}<span class="filter-target" id="{{ f | lower }}"></span>{% endfor %}
+  <span class="filter-target" id="all"></span>
+  {% for f in page.filters %}<span class="filter-target" id="{{ f | lower }}"></span>{% endfor %}
   <nav class="filters" aria-label="Filter projects by theme">
-    <span class="filters-label">Filter:</span>
+    <span class="label">Show</span>
     <ul>
       <li><a class="filter" href="#all" data-filter="all">All</a></li>
       {% for f in page.filters %}<li><a class="filter" href="#{{ f | lower }}" data-filter="{{ f | lower }}">{{ f }}</a></li>{% endfor %}
@@ -18,19 +19,17 @@
   <div class="work-lists" id="work-lists">
     <section class="work-group" aria-labelledby="main-projects">
       <h2 class="visually-hidden" id="main-projects">Main projects</h2>
-      {% set show_media = all_media(projects) %}
-      <ul class="cards">
-      {% for p in projects %}{% with heading = "h3" %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
-      </ul>
+      <ol class="index">
+      {% for p in projects %}{% with num = loop.index %}{% include "partials/row.html" %}{% endwith %}{% endfor %}
+      </ol>
     </section>
 
     {% if page.more %}
     <section class="work-group" aria-labelledby="more">
       <h2 class="section-title" id="more">More projects</h2>
-      <p class="section-intro">Shorter projects: CentraleSupélec project weeks (see <a href="{{ url('/about/#project-weeks') }}">the list</a>), course projects and competitions.</p>
-      <ul class="cards cards-compact">
-      {% set show_media = False %}
-      {% for p in page.more %}{% with heading = "h3", compact = True %}{% include "partials/card.html" %}{% endwith %}{% endfor %}
+      <p class="section-intro">{{ page.more_intro | inline_md }}</p>
+      <ul class="index index-compact">
+      {% for p in page.more %}{% with compact = True, num = None %}{% include "partials/row.html" %}{% endwith %}{% endfor %}
       </ul>
     </section>
     {% endif %}
@@ -48,13 +47,13 @@
   function apply(key, announce) {
     if (keys.indexOf(key) < 0) key = "all";
     lists.setAttribute("data-active", key);
-    var cards = lists.querySelectorAll(".card"), shown = 0;
+    var cards = lists.querySelectorAll(".ix"), shown = 0;
     Array.prototype.forEach.call(cards, function (c) {
       var ok = key === "all" || (" " + c.getAttribute("data-filters") + " ").indexOf(" " + key + " ") > -1;
       c.hidden = !ok; if (ok) shown++;
     });
     Array.prototype.forEach.call(lists.querySelectorAll(".work-group"), function (g) {
-      g.hidden = !g.querySelector(".card:not([hidden])");
+      g.hidden = !g.querySelector(".ix:not([hidden])");
     });
     lists.classList.toggle("is-empty", shown === 0);
     Array.prototype.forEach.call(links, function (a) {

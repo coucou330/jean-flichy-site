@@ -17,7 +17,7 @@ tools: [Python]
 image: { base: /img/projects/slug-hero, alt: "Describe the image", caption: "Caption.", credit: "" }
 ---
 
-**TL;DR** — Two sentences: the problem and what I achieved.
+A short first paragraph, in plain words: the problem and what I achieved.
 
 ## Context
 Why this problem matters.

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Airship weather operability — Jean Flichy</title>
-  <meta name="description" content="Flying Whales internship — six months of on-site LiDAR wind data against AROME forecasts, turned into operability statistics and a go/no-go rule.">
+  <title>Airship weather operability · Jean Flichy</title>
+  <meta name="description" content="Flying Whales internship: six months of on-site LiDAR wind data against AROME forecasts, turned into operability statistics and a go/no-go rule.">
 <link rel="canonical" href="https://coucou330.github.io/jean-flichy-site/work/airship-weather-operability/">  <meta property="og:type" content="article">
-  <meta property="og:title" content="Airship weather operability — Jean Flichy">
-  <meta property="og:description" content="Flying Whales internship — six months of on-site LiDAR wind data against AROME forecasts, turned into operability statistics and a go/no-go rule.">
+  <meta property="og:title" content="Airship weather operability · Jean Flichy">
+  <meta property="og:description" content="Flying Whales internship: six months of on-site LiDAR wind data against AROME forecasts, turned into operability statistics and a go/no-go rule.">
   <meta property="og:url" content="https://coucou330.github.io/jean-flichy-site/work/airship-weather-operability/">
   <meta property="og:image" content="https://coucou330.github.io/jean-flichy-site/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -17,15 +17,15 @@
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="author" content="Jean Flichy">
-  <meta name="theme-color" content="#F7F5F0">
+  <meta name="theme-color" content="#FBFBF9">
   <link rel="icon" href="/jean-flichy-site/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/jean-flichy-site/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/jean-flichy-site/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/jean-flichy-site/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/jean-flichy-site/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
-    @font-face { font-family: "Inter"; font-weight: 400; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/inter-latin-400-normal.woff2") format("woff2"); }
-    @font-face { font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/inter-latin-600-normal.woff2") format("woff2"); }
-    @font-face { font-family: "Source Serif 4"; font-weight: 400; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); }
-    @font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Barlow"; font-weight: 400; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/barlow-latin-400-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Barlow"; font-weight: 400; font-style: italic; font-display: swap; src: url("/jean-flichy-site/fonts/barlow-latin-400-italic.woff2") format("woff2"); }
+    @font-face { font-family: "Barlow"; font-weight: 600; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/barlow-latin-600-normal.woff2") format("woff2"); }
+    @font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("/jean-flichy-site/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
   </style>
   <link rel="stylesheet" href="/jean-flichy-site/css/site.css">
 </head>
@@ -46,41 +46,35 @@
 
   <main id="main">
 <article class="wrap page project">
-  <p class="eyebrow"><a href="/jean-flichy-site/work/">Work</a></p>
+  <p class="crumbs mono"><a href="/jean-flichy-site/work/">Work</a><span>Project 05 of 07</span><span>2025</span></p>
   <h1 class="page-title">Airship weather operability</h1>
-<p class="lead">When can a 200-metre cargo airship safely leave its hangar?</p>  <figure class="figure">
+<p class="lead">When can a 200-metre cargo airship safely leave its hangar?</p>  <dl class="facts">
+<div><dt>Dates</dt><dd>23 June – 25 July 2025 (5 weeks)</dd></div><div><dt>Where</dt><dd>Flying Whales, Operations – Engineering team</dd></div><div><dt>My role</dt><dd>Operations data intern</dd></div><div><dt>Tools</dt><dd>Python, Jupyter, Météo-France data, ROC / confusion-matrix analysis</dd></div><div><dt>Subjects</dt><dd>Data / Weather / Transport</dd></div>  </dl>
+  <figure class="figure">
     <picture>
       <source type="image/webp" srcset="/jean-flichy-site/img/projects/airship-wind-rose-800.webp 800w, /jean-flichy-site/img/projects/airship-wind-rose-1600.webp 1220w" sizes="(min-width: 1180px) 1088px, 100vw">
       <img src="/jean-flichy-site/img/projects/airship-wind-rose-800.jpg" srcset="/jean-flichy-site/img/projects/airship-wind-rose-800.jpg 800w, /jean-flichy-site/img/projects/airship-wind-rose-1600.jpg 1220w" sizes="(min-width: 1180px) 1088px, 100vw" alt="Wind rose of six months of LiDAR measurements at 50 m, weighted by wind speed, with dominant south-easterly winds" width="800" height="500" fetchpriority="high">
     </picture>
     <figcaption>Wind rose of the on-site LiDAR measurements at 50 m, weighted by wind speed so that strong winds stand out. <span class="credit">Figure: Jean Flichy, internship report</span></figcaption>
   </figure>
-  <dl class="facts">
-<div><dt>Dates</dt><dd>23 June – 25 July 2025 (5 weeks)</dd></div><div><dt>Where</dt><dd>Flying Whales, Operations – Engineering team</dd></div><div><dt>My role</dt><dd>Operations data intern</dd></div><div><dt>Tools</dt><dd>Python, Jupyter, Météo-France data, ROC / confusion-matrix analysis</dd></div>  </dl>
-<ul class="tags"><li class="tag">Data</li><li class="tag">Weather</li><li class="tag">Transport</li></ul>  <div class="prose"><p><strong>TL;DR</strong> — Flying Whales is developing the LCA60T, a 200-metre rigid airship for heavy cargo. I studied whether the weather at its future final assembly site would let it operate, compared six months of on-site LiDAR wind measurements with Météo-France AROME forecasts, and proposed a go/no-go framework that weighs safety against cost.</p>
+  <div class="prose"><p>Flying Whales is developing the LCA60T, a 200-metre rigid airship for heavy cargo. I studied whether the weather at its future final assembly site would let it operate. I compared six months of on-site LiDAR wind measurements with Météo-France AROME forecasts and proposed a go/no-go framework that weighs safety against cost.</p>
 <h2>Context</h2>
-<p>The LCA60T is designed to carry up to 60 tonnes. An airship that size cannot leave its hangar in strong or badly aligned wind. The company needed two answers for its final assembly site at Laruscade, in Gironde: how often operations will be possible — to plan the test phase and price the service — and how to decide, day by day, using forecasts that are never perfect.</p>
+<p>The LCA60T is designed to carry up to 60 tonnes, and an airship that size cannot leave its hangar in strong or badly aligned wind. For its final assembly site at Laruscade, in Gironde, the company needed two answers. How often will operations be possible, to plan the test phase and price the service? And how should the team decide, day by day, with forecasts that are never perfect?</p>
 <h2>What I did</h2>
-<ul>
-<li><strong>Audited the data.</strong> The on-site LiDAR measures the wind every 4 seconds, every 20 m from 50 to 300 m. About 7% of the values over the period were missing or invalid. I linked the gaps to low temperatures and noise and, with the team, to the probable effect of a nearby building's orientation.</li>
-<li><strong>Described the site's wind.</strong> I built configurable wind roses, checked the day–night wind cycle across France on about 100 weather stations over ten years, and plotted the "dangerous cases": conditions that could damage the airship outside occurred in about 0.01% of cases over six months.</li>
-<li><strong>Coded the operating rules</strong> for three operations — leaving the hangar, take-off and landing, and load exchange — with their time windows, and computed how many days each would be possible.</li>
-<li><strong>Tested the forecasts.</strong> I resampled the 4-second measurements to compare them with AROME's hourly forecasts, then scored the forecast as a classifier, with ROC curves and confusion matrices.</li>
-</ul>
+<p>I began by auditing the data. The on-site LiDAR measures the wind every 4 seconds, every 20 m from 50 to 300 m. About 7% of the values over the period were missing or invalid. I linked the gaps to low temperatures and noise and, with the team, to the probable effect of a nearby building's orientation.</p>
+<p>Then I described the site's wind. I built configurable wind roses and checked the day–night wind cycle across France on about 100 weather stations over ten years. I also plotted the "dangerous cases", conditions that could damage the airship outside; they occurred in about 0.01% of cases over six months.</p>
+<p>Next I coded the operating rules for three operations (leaving the hangar, take-off and landing, load exchange) with their time windows, and computed how many days each would be possible.</p>
+<p>Finally I tested the forecasts. I resampled the 4-second measurements to compare them with AROME's hourly forecasts, then scored the forecast as a classifier with ROC curves and confusion matrices.</p>
 <h2>Results</h2>
-<ul>
-<li>AROME slightly <strong>over-predicts</strong> wind speed — the safe side — but its errors can reach about 3 m/s in speed and 60° in direction.</li>
-<li>As a classifier, the forecast is good: the area under the ROC curve is above 0.8 for every variable.</li>
-<li>For a sample mission — a two-hour round trip with a one-hour load exchange — forecasts and observations agreed in 64% of cases; 20% were missed opportunities and 3% were risky false positives.</li>
-<li><strong>Hangar orientation</strong> turned out to drive the number of operable days. It was already fixed at Laruscade, but the method can help choose the orientation of future bases.</li>
-<li>A <strong>go/no-go rule</strong> that tunes the forecast threshold to balance the cost of a missed day against the risk of a failed mission.</li>
-<li>Deliverables: a 50-page report, the analysis notebooks, and a tool that maps every Météo-France station and plots its wind rose over any period. I presented the results to the team.</li>
-</ul>
+<p>AROME slightly over-predicts wind speed, which is the safe side, but its errors can reach about 3 m/s in speed and 60° in direction. As a classifier the forecast is good: the area under the ROC curve is above 0.8 for every variable.</p>
+<p>I tested a sample mission, a two-hour round trip with a one-hour load exchange. Forecasts and observations agreed in 64% of cases; 20% were missed opportunities and 3% were risky false positives.</p>
+<p>The orientation of the hangar turned out to drive the number of operable days. It was already fixed at Laruscade, but the method can help choose the orientation of future bases. From all this I proposed a go/no-go rule that tunes the forecast threshold to balance the cost of a missed day against the risk of a failed mission.</p>
+<p>I left a 50-page report, the analysis notebooks, and a tool that maps every Météo-France station and plots its wind rose over any period. I presented the results to the team.</p>
 <p><strong>One limit.</strong> The routine that downloaded the forecasts first pointed at the wrong coordinates. It was fixed, but only four weeks of forecasts could be compared with the measurements, so the figures should be confirmed over a longer period.</p>
 <h2>What I learned</h2>
-<p>Real data is messy, and most of the work is deciding what you can trust. I also learned that a forecast is only as useful as the decision rule built on top of it. The same question comes up in energy systems, for grids and wind farms, and it is part of what drew me there.</p></div>
+<p>Real data is messy, and most of the work is deciding what you can trust. A forecast is also only as useful as the decision rule built on top of it. Energy systems face the same question with grids and wind farms, and that is part of what drew me to them.</p></div>
   <section class="gallery" aria-labelledby="media">
-    <h2 id="media">Media</h2>
+    <h2 id="media">Photos and figures</h2>
     <div class="gallery-grid is-wide">
       <figure class="figure">
 <picture>
@@ -103,20 +97,23 @@
     </div>
   </section>
   <nav class="pager" aria-label="Projects">
-<a href="/jean-flichy-site/work/jojjobot-autonomous-sailboat/">← JojjoBot — autonomous sailboat</a><a href="/jean-flichy-site/work/used-cooking-oil-biofuels/">Used cooking oil and biofuels →</a>  </nav>
+<a class="prev" href="/jean-flichy-site/work/jojjobot-autonomous-sailboat/"><span class="label">Previous project</span><span class="pager-title">JojjoBot: an autonomous sailboat</span></a><a class="next" href="/jean-flichy-site/work/used-cooking-oil-biofuels/"><span class="label">Next project</span><span class="pager-title">Used cooking oil and biofuels</span></a>  </nav>
 </article>
   </main>
 
   <footer class="site-footer" id="contact">
-    <div class="wrap footer-inner">
-      <div>
-        <h2 class="footer-title">Get in touch</h2>
-        <p class="footer-links">
-          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#97;&#110;&#102;&#108;&#105;&#99;&#104;&#121;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#101;&#97;&#110;&#102;&#108;&#105;&#99;&#104;&#121;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
-          <a href="https://www.linkedin.com/in/jean-flichy" rel="me">LinkedIn</a>
-<a href="/jean-flichy-site/cv/">CV</a>        </p>
+    <div class="wrap">
+      <div class="footer-block">
+        <div>
+          <h2 class="footer-title">Get in touch</h2>
+          <p class="footer-links">
+            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#97;&#110;&#102;&#108;&#105;&#99;&#104;&#121;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#101;&#97;&#110;&#102;&#108;&#105;&#99;&#104;&#121;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
+            <a href="https://www.linkedin.com/in/jean-flichy" rel="me">LinkedIn</a>
+<a href="/jean-flichy-site/cv/">CV</a>          </p>
+        </div>
+        <div><span class="label">Based in</span><p class="footer-small">Montréal · Paris</p></div>
+        <div><span class="label">Site</span><p class="footer-small">© 2026 Jean Flichy</p></div>
       </div>
-      <p class="footer-small">© 2026 Jean Flichy · Montréal · Paris</p>
     </div>
   </footer>
 </body>

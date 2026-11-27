@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 {% block main %}
 <article class="wrap page project">
-  <p class="eyebrow"><a href="{{ url('/work/') }}">Work</a></p>
+  <p class="crumbs mono"><a href="{{ url('/work/') }}">Work</a>{% if page.order %}<span>Project {{ '%02d' % page.order }} of {{ '%02d' % (projects | length) }}</span>{% endif %}<span>{{ page.year }}</span></p>
   <h1 class="page-title">{{ page.title }}</h1>
   {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+  <dl class="facts">
+    {% for key, label in [("dates","Dates"),("where","Where"),("team","Team"),("role","My role"),("supervisor","Supervisor")] %}
+      {% if page[key] %}<div><dt>{{ label }}</dt><dd>{{ page[key] }}</dd></div>{% endif %}
+    {% endfor %}
+    {% if page.tools %}<div><dt>Tools</dt><dd>{{ page.tools | join(", ") }}</dd></div>{% endif %}
+    {% if page.tags %}<div><dt>Subjects</dt><dd>{{ page.tags | join(" / ") }}</dd></div>{% endif %}
+  </dl>
   {% if page.image %}
   <figure class="figure">
     <picture>
@@ -15,17 +22,10 @@
     {% endif %}
   </figure>
   {% endif %}
-  <dl class="facts">
-    {% for key, label in [("dates","Dates"),("where","Where"),("team","Team"),("role","My role"),("supervisor","Supervisor")] %}
-      {% if page[key] %}<div><dt>{{ label }}</dt><dd>{{ page[key] }}</dd></div>{% endif %}
-    {% endfor %}
-    {% if page.tools %}<div><dt>Tools</dt><dd>{{ page.tools | join(", ") }}</dd></div>{% endif %}
-  </dl>
-  {% if page.tags %}<ul class="tags">{% for tag in page.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>{% endif %}
   <div class="prose">{{ page.content }}</div>
   {% if page.gallery %}
   <section class="gallery" aria-labelledby="media">
-    <h2 id="media">Media</h2>
+    <h2 id="media">Photos and figures</h2>
     <div class="gallery-grid{% if page.gallery_layout == 'wide' %} is-wide{% endif %}">
     {% for g in page.gallery %}
       <figure class="figure{% if g.tall %} is-tall{% endif %}">
@@ -42,8 +42,8 @@
     {% if p.url == page.url %}{% set ns.found = True %}{% elif not ns.found %}{% set ns.prev = p %}{% endif %}
   {% endfor %}
   <nav class="pager" aria-label="Projects">
-    {% if ns.prev %}<a href="{{ url(ns.prev.url) }}">← {{ ns.prev.title }}</a>{% else %}<span></span>{% endif %}
-    {% if ns.next %}<a href="{{ url(ns.next.url) }}">{{ ns.next.title }} →</a>{% endif %}
+    {% if ns.prev %}<a class="prev" href="{{ url(ns.prev.url) }}"><span class="label">Previous project</span><span class="pager-title">{{ ns.prev.title }}</span></a>{% else %}<span></span>{% endif %}
+    {% if ns.next %}<a class="next" href="{{ url(ns.next.url) }}"><span class="label">Next project</span><span class="pager-title">{{ ns.next.title }}</span></a>{% endif %}
   </nav>
 </article>
 {% endblock %}
