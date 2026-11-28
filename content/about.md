@@ -60,7 +60,7 @@ Each year, the timetable stopped several times for an intensive week or a longer
 
 | When | Format | What we did |
 |---|---|---|
-| Nov. 2023 | Coding Weeks (two weeks, with Onepoint) | [FloodViz](/work/#more), a Python tool that simulates urban flooding — winning team |
+| Nov. 2023 | Coding Weeks (two weeks, with Onepoint Bordeaux) | [FloodViz](/work/#more), a Python tool that simulates urban flooding — winning team |
 | Feb. 2024 | Modelling Week | [VizAdrift](/work/#more): could a kite-towed boat drift from Montréal to France? |
 | 2024 | Year 1 entrepreneurship project (three months) | [C-Blade](/work/#more), wing sails for cargo ships |
 | Summer 2024 | Social-impact internship | [Used cooking oil and biofuels](/work/used-cooking-oil-biofuels/), Climate Economics Chair |

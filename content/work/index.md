@@ -35,6 +35,17 @@ more:
     image: { base: /img/projects/smartbike-roadmap, h: 450, max_w: 1274, alt: "Project roadmap table: six phases from specifications and market interviews in January to pilot production and launch in December" }
     # image : diapo 23 de la présentation INTG215 (SHOTLIST #17)
     # src : présentation INTG215 (sources/2026-11-23) ; INVENTAIRE I ; rôle CTO et CFO (Jean, 23/11)
+  - title: CropAI — predicting crop health, mentored by CGI
+    meta: McGill AI Society · MAIS 202, Accelerated Introduction to Machine Learning · team of four
+    year: "2026"
+    summary: Our final project set out to warn farmers about crop disease before symptoms appear, with an hour a week of mentoring from CGI. I explored the dataset (its features, how they depend on each other, a first PCA) and tested models for a second tool that recommends which crop to plant. It did not work out. The labelled data we found had no time dimension, so we could not forecast, and our wheat classifier's 70% accuracy came from putting every test sample in the same class. What I keep from it is to secure the data before promising the model.
+    tags: [Machine learning, Agriculture]
+    filters: [Research]
+    # image : graphique « rf_feature_importance » du dépôt écarté (l'échelle 1e-5 de la permutation, coupée en vignette, rendait le graphique trompeur)
+    # src : Jean (28/11) : cours MAIS 202 avec la McGill AI Society, modèle de prédiction de maladies des cultures, en collaboration avec CGI, « ça a pas très bien marché faute de dataset » ;
+    #       Drive « MAIS 202 Projet » (équipe de 4, pitch CGI, mentors CGI une heure par semaine) ; « Winter 2026 Final Project Teams » ;
+    #       dépôt CropDiseasePredictor (commits de Jean : exploration du jeu de données, interdépendances, 1re PCA, essais de recommandation de culture, split train/test) ;
+    #       CropAI_Project_Presentation.pptx (accuracy 69,92 %, precision 69,92 %, recall 100 %, F1 82,30 % → toutes les prédictions dans la même classe ; pas de paramètre temporel).
   - title: VizAdrift — could a boat drift home to France?
     meta: CentraleSupélec project week · Year 1 Modelling Week · two weeks
     year: "2024"
